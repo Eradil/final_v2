@@ -1,64 +1,13 @@
 {
   "products": [
     {
-      "name": "Komuzy",
-      "produced": "Made of walnut, juniper  of wood.",
-      "details": "animal gut strings",
-      "descr": "Komuz is an ancient Kyrgyz stringed instrument. It consists of two main parts: the body and neck, along which three strings are stretched. The length of the instrument is approximately 90 centimeters, the widest part is 19.5-22.5. All parts - body, headstock, neck, filly and tuning pegs - are made of wood. In ancient times, strings were made from the intestines and sinews of animals, now silk threads or synthetic materials are used. The sound quality of a komuz depends on the strings and the type of wood from which it is made.",
-      "price": 100,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Stamp_of_Kyrgyzstan_020.jpg",
-      "id": 1,
-      "description": "Kyl-kyyak is a two-stringed string instrument made of apricot or mulberry wood. The length is no more than 65-70 centimeters, the depth of the body cup is 3.5-5 centimeters, with a shape resembling an inverted pear cut in half. Its half is covered with a deck, which is covered with dressed camel skin. A support is installed across the bottom. At the bottom, in the middle of the soundboard, a piece of thin skin is pulled - kutkun (string holder), the edge of which is fixed at the end of the instrument."
-    },
-    {
-      "name": "Komuza",
-      "produced": "Made from juniper and apricot wood",
-      "details": "Horsehair is used to make strings",
-      "descr": "Kyl-kyyak is a two-stringed string instrument made of apricot or mulberry wood. The length is no more than 65-70 centimeters, the depth of the body cup is 3.5-5 centimeters, with a shape resembling an inverted pear cut in half. Its half is covered with a deck, which is covered with dressed camel skin. A support is installed across the bottom. At the bottom, in the middle of the soundboard, a piece of thin skin is pulled - kutkun (string holder), the edge of which is fixed at the end of the instrument.",
-      "price": 100,
-      "image": "https://upload.wikimedia.org/wikipedia/ky/5/58/1995.jpg",
-      "id": 2,
-      "description": "Kyl-kyyak is a two-stringed string instrument made of apricot or mulberry wood. The length is no more than 65-70 centimeters, the depth of the body cup is 3.5-5 centimeters, with a shape resembling an inverted pear cut in half. Its half is covered with a deck, which is covered with dressed camel skin. A support is installed across the bottom. At the bottom, in the middle of the soundboard, a piece of thin skin is pulled - kutkun (string holder), the edge of which is fixed at the end of the instrument."
-    },
-    {
-      "name": "Kerney2",
-      "produced": "Made of copper or brass",
-      "details": "Muyuz-kerney is made from a single horn of mountain argali",
-      "descr": "Kerney is one of the Kyrgyz wind instruments, an analogue of bugles. Produces a very strong natural sound. It was used as an independent notification tool in military campaigns or together with surnay, dobulbas at various celebrations. Mentions about this instrument in the epic Manas are more common than about other instruments.Two types are known. The first is made from a single horn of a mountain goat. The mouthpiece is cut from the narrow side of the horn. The tool has no other holes. The length is about 30-45 centimeters.The second type of instrument is made of copper. The length of the pipe is about 1.5-2 meters, to the end of which a mouthpiece is attached, the open side is curved in the form of a cylinder with a diameter of 35-40 millimeters. Has no holes for changing sounds. For ease of transportation, it was made collapsible.",
-      "price": 100,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVt-647hRdB8mWT_SUstlhKktK2BPGAwRaXkkWSLBs756FRyR9YjCZnGh6xqlaSIGjyJY&usqp=CAU",
-      "id": 3,
-      "description": "Kyl-kyyak is a two-stringed string instrument made of apricot or mulberry wood. The length is no more than 65-70 centimeters, the depth of the body cup is 3.5-5 centimeters, with a shape resembling an inverted pear cut in half. Its half is covered with a deck, which is covered with dressed camel skin. A support is installed across the bottom. At the bottom, in the middle of the soundboard, a piece of thin skin is pulled - kutkun (string holder), the edge of which is fixed at the end of the instrument."
-    },
-    {
-      "name": "Kyl-kyyak",
-      "description": "Kyl-kyyak is a two-stringed string instrument made of apricot or mulberry wood. The length is no more than 65-70 centimeters, the depth of the body cup is 3.5-5 centimeters, with a shape resembling an inverted pear cut in half. Its half is covered with a deck, which is covered with dressed camel skin. A support is installed across the bottom. At the bottom, in the middle of the soundboard, a piece of thin skin is pulled - kutkun (string holder), the edge of which is fixed at the end of the instrument.",
-      "produced": "Made of copper or brass",
-      "price": 12,
-      "details": "Horsehair is used to make strings",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Stamp_of_Kyrgyzstan_020.jpg",
-      "id": 6
-    },
-    {
       "name": "name",
-      "description": "Kyl-kyyak is a two-stringed string instrument made of apricot or mulberry wood. The length is no more than 65-70 centimeters",
+      "description": "vncb,m.,,.",
       "produced": "Made from juniper and apricot wood",
       "price": 12,
       "details": "Horsehair is used to make strings",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Stamps_of_Kyrgyzstan%2C_2011-34.jpg/330px-Stamps_of_Kyrgyzstan%2C_2011-34.jpg",
-      "id": 7
-    },
-    {
-      "name": "Komuzz",
-      "user": {
-        "introduction": "Komuz is an ancient Kyrgyz stringed instrument. It consists of two main parts: the body and neck, along which three strings are stretched. The length of the instrument is approximately 90 centimeters, the widest part is 19.5-22.5. All parts - body, headstock, neck, filly and tuning pegs - are made of wood. In ancient times, strings were made from the intestines and sinews of animals, now silk threads or synthetic materials are used. The sound quality of a komuz depends on the strings and the type of wood from which it is made."
-      },
-      "produced": "Made of walnut, juniper  of wood.",
-      "price": 12,
-      "details": "Horsehair is used to make strings",
-      "image": "https://upload.wikimedia.org/wikipedia/ky/5/58/1995.jpg",
-      "id": 8,
-      "description": "Kyl-kyyak is a two-stringed string instrument made of apricot or mulberry wood. The length is no more than 65-70 centimeters, the depth of the body cup is 3.5-5 centimeters, with a shape resembling an inverted pear cut in half. Its half is covered with a deck, which is covered with dressed camel skin. A support is installed across the bottom. At the bottom, in the middle of the soundboard, a piece of thin skin is pulled - kutkun (string holder), the edge of which is fixed at the end of the instrument."
+      "image": "https://images.unsplash.com/photo-1649829785836-d5ac103e825c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "id": 1
     }
   ]
 }

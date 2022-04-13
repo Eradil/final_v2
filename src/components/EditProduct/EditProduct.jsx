@@ -22,7 +22,7 @@ const EditProduct = () => {
   function save(values) {
     console.log(values);
     editProduct(params.id, values);
-    navigate("/");
+    navigate("/admin");
   }
 
   return (
@@ -103,18 +103,7 @@ const EditProduct = () => {
           >
             <Input placeholder="URL of image" />
           </Form.Item>
-          <Form.Item
-            label="Image"
-            name="image"
-            rules={[
-              {
-                required: true,
-                message: "Please edit URL of second image!",
-              },
-            ]}
-          >
-            <Input placeholder="URL of second image" />
-          </Form.Item>
+
           <Form.Item>
             <Button htmlType="submit">Save product</Button>
           </Form.Item>

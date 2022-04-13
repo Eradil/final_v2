@@ -9,7 +9,7 @@ const CASE_GET_PRODUCTS = "CASE_GET_PRODUCTS";
 const CASE_GET_ONE_PRODUCT = "CASE_GET_ONE_PRODUCT";
 // cases end
 //
-let API = "http://localhost:8000/products";
+let API = "http://localhost:8001/products";
 //
 const INIT_STATE = {
   products: [],

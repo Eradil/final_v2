@@ -4,6 +4,7 @@ import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { contextProducts } from "../../context/contextProducts";
 import AddProduct from "../AddProduct.jsx/AddProduct";
+import Navbar from "../Navbar/Navbar";
 import "./AdminProduct.css";
 const { Meta } = Card;
 
@@ -15,9 +16,10 @@ const AdminProduct = () => {
   }, []);
   console.log(products);
   return (
-    <div className="container">
+    <div>
+      <Navbar />
       <AddProduct />
-      <div className="admin_list container">
+      <div className="admin_list">
         {products.map((item) => (
           <div key={item.id}>
             <Card

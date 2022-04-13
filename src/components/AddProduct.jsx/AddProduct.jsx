@@ -113,18 +113,7 @@ const AddProduct = () => {
           >
             <Input placeholder="URL of image" />
           </Form.Item>
-          <Form.Item
-            label="Image"
-            name="image"
-            rules={[
-              {
-                required: true,
-                message: "Please input URL of second image!",
-              },
-            ]}
-          >
-            <Input placeholder="URL of second image" />
-          </Form.Item>
+
           <Form.Item>
             <Button htmlType="submit">Add product</Button>
           </Form.Item>

@@ -3,8 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import AdminProduct from "./components/AdminProduct/AdminProduct";
 import Details from "./components/Details/Details";
+import EditProduct from "./components/EditProduct/EditProduct";
 import Home from "./components/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
+// import Navbar from "./components/Navbar/Navbar";
 import ProductsList from "./components/Products/ProductsList";
 
 const Routing = () => {
@@ -20,7 +21,7 @@ const Routing = () => {
       id: 2,
     },
     {
-      link: "/details/:id",
+      link: "/product/:id",
       element: <Details />,
       id: 3,
     },
@@ -34,6 +35,11 @@ const Routing = () => {
     {
       link: "/admin",
       element: <AdminProduct />,
+      id: 1,
+    },
+    {
+      link: "/edit/:id",
+      element: <EditProduct />,
       id: 1,
     },
   ];
