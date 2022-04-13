@@ -1,45 +1,35 @@
-import { Button, Form, Input, InputNumber, Modal } from "antd";
-import React, { useContext, useState } from "react";
+import { Button, Form, Input, InputNumber } from "antd";
+import React, { useContext, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { contextProducts } from "../../context/contextProducts";
-import "./AddProduct.css";
+import "./EditProduct.css";
 
-const AddProduct = () => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const { createProduct } = useContext(contextProducts);
+const EditProduct = () => {
+  const { getOneProduct, editProduct, oneProduct } =
+    useContext(contextProducts);
+  const params = useParams();
+  const [form] = Form.useForm();
+  const navigate = useNavigate();
 
-  function save(newProduct) {
-    createProduct({
-      ...newProduct,
-      // comment: [],
-    });
-    setIsModalVisible(false);
+  useEffect(() => {
+    getOneProduct(params.id);
+  }, []);
+
+  useEffect(() => {
+    form.setFieldsValue(oneProduct);
+  }, [oneProduct]);
+
+  function save(values) {
+    console.log(values);
+    editProduct(params.id, values);
+    navigate("/");
   }
 
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleSave = () => {
-    setIsModalVisible(false);
-  };
   return (
-    <>
-      <div className="add_btn">
-        <Button onClick={showModal}>Add product</Button>
-      </div>
-
-      <Modal
-        footer={null}
-        title="Add products"
-        visible={isModalVisible}
-        onOk={handleOk}
-        onCancel={handleSave}
-      >
-        <Form layout="vertical" name="basic" onFinish={save}>
+    <div className="edit_products">
+      <h2 className="edit_title">You can make adjustments</h2>
+      <div className="edit_box">
+        <Form form={form} layout="vertical" name="basic" onFinish={save}>
           <Form.Item
             label="Name"
             name="name"
@@ -107,7 +97,7 @@ const AddProduct = () => {
             rules={[
               {
                 required: true,
-                message: "Please input URL of image!",
+                message: "Please edit URL of image!",
               },
             ]}
           >
@@ -119,19 +109,19 @@ const AddProduct = () => {
             rules={[
               {
                 required: true,
-                message: "Please input URL of second image!",
+                message: "Please edit URL of second image!",
               },
             ]}
           >
             <Input placeholder="URL of second image" />
           </Form.Item>
           <Form.Item>
-            <Button htmlType="submit">Add product</Button>
+            <Button htmlType="submit">Save product</Button>
           </Form.Item>
         </Form>
-      </Modal>
-    </>
+      </div>
+    </div>
   );
 };
 
-export default AddProduct;
+export default EditProduct;

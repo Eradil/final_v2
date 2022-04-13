@@ -1,0 +1,15 @@
+.product_list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
+
+.list_title {
+  margin: 10px auto;
+  padding: 10px;
+  max-width: 600px;
+  text-align: center;
+  font-family: "Nanum Myeongjo", serif;
+  /* border: 1px solid black; */
+}
