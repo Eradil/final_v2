@@ -7,7 +7,7 @@ import {
 } from "@ant-design/icons";
 import React from "react";
 import "./Navbar.css";
-import eagle from "./sources/eagle.jpeg";
+import eagle from "./sources/eagle.svg";
 
 class Navbar extends React.Component {
   render() {
