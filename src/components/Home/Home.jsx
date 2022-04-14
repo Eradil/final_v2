@@ -12,37 +12,36 @@ import sarychelek from "../Home/sources/sarychelek.jpeg";
 import jetioguz from "../Home/sources/jetioguz.jpeg";
 import yel from "../Home/sources/yel.png";
 // import Header from "../Header/Header";
-import Navbar2 from "../Navbar/Navbar";
+// import Navbar2 from "../Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 
 const Home = () => {
   return (
     <>
-      <div className="container">
+      <div>
         <div className="container__item landing-page-container">
-        
-          <img id="bg" src={bg} alt="" style={{ height:'100%'}}/>
+          <img id="bg" src={bg} alt="" style={{ height: "100%" }} />
 
           <div className="content-wrapper">
-          <Navbar2/>
-          <div className="content-wrapper-2">
-            <header className="header">
-              <div className="menu-icon header__item">
+            <Navbar />
+            <div className="content-wrapper-2">
+              <header className="header">
+                <div className="menu-icon header__item"></div>
+
+                <h1 className="heading header__item">.</h1>
+              </header>
+
+              <p className="coords">N 49° 16' 35.173" / W 0° 42' 11.30"</p>
+
+              <div className="ellipse-container">
+                <h2 className="greeting greeting-2">KyrgyzBuy</h2>
+                <div className="ellipse ellise__outter--thin">
+                  <div className="ellipse ellipse__orbit"></div>
+                </div>
+
+                <div className="ellipse ellipse__outter--thick"></div>
               </div>
-
-              <h1 className="heading header__item">.</h1>
-            </header>
-
-            <p className="coords">N 49° 16' 35.173" / W 0° 42' 11.30"</p>
-
-            <div className="ellipse-container">
-              <h2 className="greeting greeting-2">KyrgyzBuy</h2>
-              <div className="ellipse ellise__outter--thin">
-                <div className="ellipse ellipse__orbit"></div>
-              </div>
-
-              <div className="ellipse ellipse__outter--thick"></div>
             </div>
-          </div>
           </div>
         </div>
       </div>
@@ -55,22 +54,20 @@ const Home = () => {
           experience.
         </p>
       </div>
-      <p className="top-places">
-        Top Places
-      </p>
+      <p className="top-places">Top Places</p>
 
-    <div className="four-cards dost">
+      <div className="four-cards dost">
         <div className="second-section-container">
-            <div className="card second-section-half">
+          <div className="card second-section-half">
             <img src={burana} alt="" className="card-image" />
             <h3 className="card-title">Burana tower</h3>
-            </div>
-            <div className="second-section-half">
+          </div>
+          <div className="second-section-half">
             <p className="card-description">
-                The Burana Tower (Russian: Башня Бурана) is a large minaret in the
-                Chüy Valley in northern Kyrgyzstan. 
+              The Burana Tower (Russian: Башня Бурана) is a large minaret in the
+              Chüy Valley in northern Kyrgyzstan.
             </p>
-            </div>
+          </div>
         </div>
 
         <div className="second-section-container">
@@ -129,19 +126,19 @@ const Home = () => {
             </p>
           </div>
         </div>
-      
+
         <div className="second-section-container">
-            <div className="card second-section-half">
+          <div className="card second-section-half">
             <img src={jetioguz} alt="" className="card-image" />
             <h3 className="card-title">Jeti Oguz Mountain</h3>
-            </div>
-            <div className="second-section-half">
+          </div>
+          <div className="second-section-half">
             <p className="card-description">
-                Jeti Oguz is a sandstone formation about 25 km (15 miles) southwest
-                of Karakol. The name means “seven bulls”, which comes from the fact
-                that the rocks look like seven bulls.
+              Jeti Oguz is a sandstone formation about 25 km (15 miles)
+              southwest of Karakol. The name means “seven bulls”, which comes
+              from the fact that the rocks look like seven bulls.
             </p>
-            </div>
+          </div>
         </div>
 
         <div className="second-section-container">
@@ -157,21 +154,21 @@ const Home = () => {
             </p>
           </div>
         </div>
-      
+
         <div className="second-section-container">
-            <div className="card second-section-half">
+          <div className="card second-section-half">
             <img src={jetioguz} alt="" className="card-image" />
             <h3 className="card-title">Jeti Oguz Mountain</h3>
-            </div>
-            <div className="second-section-half">
+          </div>
+          <div className="second-section-half">
             <p className="card-description">
-                Jeti Oguz is a sandstone formation about 25 km (15 miles) southwest
-                of Karakol. The name means “seven bulls”, which comes from the fact
-                that the rocks look like seven bulls.
+              Jeti Oguz is a sandstone formation about 25 km (15 miles)
+              southwest of Karakol. The name means “seven bulls”, which comes
+              from the fact that the rocks look like seven bulls.
             </p>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
     </>
   );
 };

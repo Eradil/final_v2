@@ -1,0 +1,41 @@
+.container {
+  max-width: 1400px;
+  margin: 10px auto;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.details_left {
+  margin-right: 20px;
+}
+.details_img {
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+.details_info {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info_inner {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: bold;
+}
+.info_title {
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 1023px) {
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 20px;
+  }
+}

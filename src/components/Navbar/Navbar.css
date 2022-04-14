@@ -6,12 +6,13 @@ a:hover {
   /* border-bottom: 1px solid #111; */
 }
 
-.navbar{
-  background: rgba(0,0,0,.2);
-  width:100vw;
+.navbar {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  /* overflow-x: hidden; */
   /* position: fixed; */
 }
 
@@ -19,6 +20,29 @@ a:hover {
   width: 80px;
 }
 
-.navbar__inner{
-  width: 60%;
+.navbar__inner {
+  width: 80%;
 }
+
+/* @media all and (max-width: 426px) {
+  .logoToHide {
+    display: none;
+  }
+}
+@media all and (min-width: 768px) {
+  .logoToHide {
+    display: block;
+  }
+} */
+
+/* @media all and (max-width: 426px) {
+  .bigLogoToHide {
+    display: block;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .bigLogoToHide {
+    display: none;
+  }
+} */
