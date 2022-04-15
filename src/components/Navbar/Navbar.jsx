@@ -46,7 +46,7 @@ const Navbar = () => {
               Home
             </Menu.Item>
           </Link>
-          <Link to={"/product"}>
+          <Link to={"/main"}>
             <Menu.Item
               style={{ color: "black", listStyle: "none" }}
               icon={<ShoppingCartOutlined />}

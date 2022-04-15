@@ -66,8 +66,8 @@ const AddProduct = () => {
             <Input.TextArea placeholder="description" />
           </Form.Item>
           <Form.Item
-            label="Produced"
-            name="produced"
+            label="Made in"
+            name="made in"
             rules={[
               {
                 required: true,
@@ -90,8 +90,8 @@ const AddProduct = () => {
             <InputNumber min={1} style={{ width: "100%" }} />
           </Form.Item>
           <Form.Item
-            label="Details"
-            name="details"
+            label="Category"
+            name="type"
             rules={[
               {
                 required: true,

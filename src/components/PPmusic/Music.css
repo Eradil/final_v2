@@ -1,0 +1,5 @@
+.card-music{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

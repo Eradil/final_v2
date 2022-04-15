@@ -14,6 +14,7 @@ import yel from "../Home/sources/yel.png";
 // import Header from "../Header/Header";
 // import Navbar2 from "../Navbar/Navbar";
 import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -55,8 +56,11 @@ const Home = () => {
         </p>
       </div>
       <p className="top-places">Top Places</p>
-
       <div className="four-cards dost">
+
+      <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={burana} alt="" className="card-image" />
@@ -69,7 +73,11 @@ const Home = () => {
             </p>
           </div>
         </div>
-
+        </Link>
+      
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={tashrabat} alt="" className="card-image" />
@@ -83,7 +91,11 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
 
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={ik} alt="" className="card-image" />
@@ -98,7 +110,11 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
 
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={sulaimantoo} alt="" className="card-image" />
@@ -113,6 +129,11 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
+
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={sarychelek} alt="" className="card-image" />
@@ -126,7 +147,11 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
 
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={jetioguz} alt="" className="card-image" />
@@ -140,7 +165,11 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
 
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={sarychelek} alt="" className="card-image" />
@@ -154,7 +183,12 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
 
+
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={jetioguz} alt="" className="card-image" />
@@ -168,6 +202,7 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
       </div>
     </>
   );

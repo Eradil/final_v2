@@ -7,7 +7,12 @@ import Details from "./components/Details/Details";
 import EditProduct from "./components/EditProduct/EditProduct";
 import Favorite from "./components/Favorite/Favorite";
 import Home from "./components/Home/Home";
+import Main from "./components/Main/Main";
 import Payment from "./components/Payment/Payment";
+import Clothes from "./components/PPclothes/Clothes";
+import Interior from "./components/PPinterier/Interior";
+import Music from "./components/PPmusic/Music";
+import Tours from "./components/PPtours/Tours";
 // import Navbar from "./components/Navbar/Navbar";
 import ProductsList from "./components/Products/ProductsList";
 
@@ -29,6 +34,26 @@ const Routing = () => {
       id: 3,
     },
     {
+      link: "/clothes",
+      element: <Clothes />,
+      id: 4,
+    },
+    {
+      link: "/interior",
+      element: <Interior />,
+      id: 5,
+    },
+    {
+      link: "/music",
+      element: <Music />,
+      id: 6,
+    },
+    {
+      link: "/tours",
+      element: <Tours/>,
+      id: 7,
+    },
+    {
       link: "/favorite",
       element: <Favorite />,
       id: 8,
@@ -43,6 +68,12 @@ const Routing = () => {
       element: <Payment />,
       id: 10,
     },
+    {
+      link: "/main",
+      element: <Main />,
+      id: 11,
+    },
+    
     // {
     //   link: "/details/:id",
     //   element: <Details />,

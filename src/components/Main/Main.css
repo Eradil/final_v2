@@ -1,0 +1,18 @@
+.main-container{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+.main-cards{
+    height: 300px;
+    margin: 40px;
+    /* width: 450px; */
+}
+
+.main-page{
+    height: 100vh;
+    background-color: rgb(224,225,233);
+}
