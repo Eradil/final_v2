@@ -88,60 +88,22 @@ const Navbar = () => {
           </Link>
           <Link to={"/favorite"}>
             {/* <Badge count={+favoriteLength}> */}
-              <Menu.Item style={{ color: "black", listStyle: "none"}} icon={<HeartOutlined />}>
-                Favorite
+              <Menu.Item style={{ color: "black", listStyle: "none"}} icon={<HeartOutlined  style={{fontSize:"20px"}}/>}>
+                
               </Menu.Item>
             {/* </Badge> */}
           </Link>
           <Link to={"/cart"}>
-            {/* <Badge count={+cartLength}> */}
-              <Menu.Item style={{ color: "black", listStyle: "none"}} icon={<ShoppingOutlined />}>
-                Cart
-              </Menu.Item>
-            {/* </Badge> */}
-          </Link>
-          {/* <Link className="bigLogoToHide" to="/favorite">
-            <Badge count={+favoriteLength}>
-              <HeartOutlined style={{ fontSize: "30px", color: "black" }} />
-            </Badge>
-          </Link>
-
-          <Link className="bigLogoToHide" to="/cart">
             <Badge count={+cartLength}>
-              <ShoppingOutlined style={{ fontSize: "30px", color: "black" }} />
+              <Menu.Item style={{ color: "black", listStyle: "none"}} icon={<ShoppingOutlined style={{fontSize:"20px"}}/>}>
+                
+              </Menu.Item>
             </Badge>
-          </Link> */}
+          </Link>
+          
         </Menu>
       </div>
-      {/* <div className="header_icons">
-        <Menu
-          style={{
-            width: "100%",
-            height: "80px",
-            display: "flex",
-            justifyContent: "end",
-            alignItems: "center",
-            fontSize: "2rem",
-            background: "none",
-          }}
-          mode="horizontal"
-        >
-          <Link className="logoToHide" to={"/favorite"}>
-            <Badge count={+favoriteLength}>
-              <Menu.Item style={{ color: "black" }} icon={<HeartOutlined />}>
-                Favorite
-              </Menu.Item>
-            </Badge>
-          </Link>
-          <Link className="logoToHide" to={"/cart"}>
-            <Badge count={+cartLength}>
-              <Menu.Item style={{ color: "black" }} icon={<ShoppingOutlined />}>
-                Cart
-              </Menu.Item>
-            </Badge>
-          </Link>
-        </Menu>
-      </div> */}
+      
     </div>
   );
 };

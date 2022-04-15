@@ -3,7 +3,8 @@ import "./Home.css";
 // import facebook from "../Home/sources/facebook.svg";
 // import google from "../Home/sources/google.svg";
 // import instagram from "../Home/sources/instagram.svg";
-import bg from "../Home/sources/bg.jpeg";
+// import bg from "../Home/sources/bg.jpeg";
+import bg2 from "../Home/sources/bg2.jpeg";
 import burana from "../Home/sources/burana.jpeg";
 import tashrabat from "../Home/sources/tashrabat.jpeg";
 import ik from "../Home/sources/ik.jpeg";
@@ -15,14 +16,15 @@ import yel from "../Home/sources/yel.png";
 // import Navbar2 from "../Navbar/Navbar";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
+// import Footer from "../Footer/Footer"
 
 const Home = () => {
   return (
     <>
       <div>
         <div className="container__item landing-page-container">
-          <img id="bg" src={bg} alt="" style={{ height: "100%" }} />
-
+          {/* <img id="bg" src={bg} alt="" style={{ height: "100%" }} /> */}
+          <img id="bg" src={bg2} alt="" style={{ height: "100%" }} />
           <div className="content-wrapper">
             <Navbar />
             <div className="content-wrapper-2">
@@ -204,6 +206,7 @@ const Home = () => {
         </div>
         </Link>
       </div>
+      
     </>
   );
 };
