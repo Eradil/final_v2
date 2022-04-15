@@ -26,7 +26,7 @@ const Contact = () => {
               </div>
               <div className="text">
                 <h3>Address</h3>
-                <p>3234 Gagarin Bishkek Kyrgyzstan,422323</p>
+                <p> Bishkek Kyrgyzstan</p>
               </div>
             </div>
 

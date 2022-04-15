@@ -21,11 +21,26 @@ const Footer = () => {
             </p>
 
             <div className="social">
-              <InstagramOutlined className="social-icon" />
-              <FacebookOutlined className="social-icon" />
-              <TwitterOutlined className="social-icon" />
-              <YoutubeOutlined className="social-icon" />
-              <WhatsAppOutlined className="social-icon" />
+              <a href="https://www.instagram.com/musaliev_ulan/">
+                {" "}
+                <InstagramOutlined className="social-icon" />
+              </a>
+              <a href="https://ru-ru.facebook.com/">
+                {" "}
+                <FacebookOutlined className="social-icon" />
+              </a>
+              <a href="https://twitter.com/">
+                {" "}
+                <TwitterOutlined className="social-icon" />
+              </a>
+              <a href="https://www.youtube.com/">
+                {" "}
+                <YoutubeOutlined className="social-icon" />
+              </a>
+              <a href="https://www.whatsapp.com/?lang=ru  ">
+                {" "}
+                <WhatsAppOutlined className="social-icon" />
+              </a>
             </div>
           </div>
 
