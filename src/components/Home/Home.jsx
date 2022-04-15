@@ -14,6 +14,7 @@ import yel from "../Home/sources/yel.png";
 // import Header from "../Header/Header";
 // import Navbar2 from "../Navbar/Navbar";
 import Navbar from "../Navbar/Navbar";
+import CarouselHome from "../Carousel/Carousel";
 
 const Home = () => {
   return (
@@ -169,6 +170,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <CarouselHome />
     </>
   );
 };

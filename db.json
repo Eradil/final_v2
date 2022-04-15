@@ -8,6 +8,51 @@
       "details": "Horsehair is used to make strings",
       "image": "https://images.unsplash.com/photo-1649829785836-d5ac103e825c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
       "id": 1
+    },
+    {
+      "name": "Kerney",
+      "description": "kerney",
+      "produced": "Made of copper or brass",
+      "price": 122,
+      "details": "Horsehair is used to make strings",
+      "image": "https://images.unsplash.com/photo-1649829785836-d5ac103e825c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "id": 2
+    },
+    {
+      "name": "Komuzz",
+      "description": "komuz",
+      "produced": "Made from juniper and apricot wood",
+      "price": 1111,
+      "details": "Horsehair is used to make strings",
+      "image": "https://upload.wikimedia.org/wikipedia/ky/5/58/1995.jpg",
+      "id": 3
+    },
+    {
+      "name": "Komuzy",
+      "description": "fgcngbjk.",
+      "produced": "Made from juniper and apricot wood",
+      "price": 1,
+      "details": "Muyuz-kerney is made from a single horn of mountain argali",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVt-647hRdB8mWT_SUstlhKktK2BPGAwRaXkkWSLBs756FRyR9YjCZnGh6xqlaSIGjyJY&usqp=CAU",
+      "id": 5
+    },
+    {
+      "name": "Komuzz",
+      "description": "chj,hjk",
+      "produced": "Made from juniper and apricot wood",
+      "price": 6767,
+      "details": "Muyuz-kerney is made from a single horn of mountain argali",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Stamps_of_Kyrgyzstan%2C_2011-34.jpg/330px-Stamps_of_Kyrgyzstan%2C_2011-34.jpg",
+      "id": 7
+    },
+    {
+      "name": "Kerney",
+      "description": "фыфвапр",
+      "produced": "Made of copper or brass",
+      "price": 121,
+      "details": "Muyuz-kerney is made from a single horn of mountain argali",
+      "image": "https://images.unsplash.com/photo-1591680443128-5d3b1eb3b84b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXBkYXRlJTIwbXVzaWNhbCUyMGluc3RydW1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "id": 8
     }
   ]
 }
