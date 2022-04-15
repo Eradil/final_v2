@@ -6,11 +6,18 @@ import {
 } from "@ant-design/icons";
 import "./ProductCard.css";
 import { Card, Rate } from "antd";
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { cartContext } from "../../context/cartContext";
+import { favoriteContext } from "../../context/favoriteContext";
 const { Meta } = Card;
 
 const ProductCard = ({ item }) => {
+  const { addProductToCart, checkItemInCart } = useContext(cartContext);
+  const { addProductToFavorite, checkItemInFavorite } =
+    useContext(favoriteContext);
+  const [checkItem, setCheckItem] = useState(checkItemInCart(item.id));
+  const [checkItemX, setCheckItemX] = useState(checkItemInFavorite(item.id));
   const navigate = useNavigate();
   console.log(item);
   return (
@@ -31,21 +38,27 @@ const ProductCard = ({ item }) => {
           <EllipsisOutlined onClick={() => navigate(`/product/${item.id}`)} />
         </div>
         <div className="product_card_icons">
-          <Link to={"#"}>
-            <HeartOutlined />
-          </Link>
-          <Link to={"#"}>
-            <ShoppingCartOutlined />
-          </Link>
-          <Link to={"#"}>
-            <AudioOutlined />
-          </Link>
+          <HeartOutlined
+            className="product_card_icon1"
+            style={{ fontSize: "25px", color: checkItemX ? "red" : "white" }}
+            onClick={() => {
+              addProductToFavorite(item);
+              setCheckItemX(checkItemInFavorite(item.id));
+            }}
+          />
+
+          <ShoppingCartOutlined
+            className="product_card_icon1"
+            style={{ fontSize: "25px", color: checkItem ? "red" : "white" }}
+            onClick={() => {
+              addProductToCart(item);
+              setCheckItem(checkItemInCart(item.id));
+            }}
+          />
+
+          <AudioOutlined className="product_card_icon1" />
         </div>
       </Card>
-      {/* <div className="card_descr">
-        <p>{item.name}</p>
-        <p>{item.price}</p>
-      </div> */}
     </div>
   );
 };

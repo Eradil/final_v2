@@ -10,11 +10,11 @@ import ik from "../Home/sources/ik.jpeg";
 import sulaimantoo from "../Home/sources/sulaimantoo.jpeg";
 import sarychelek from "../Home/sources/sarychelek.jpeg";
 import jetioguz from "../Home/sources/jetioguz.jpeg";
-import yel from "../Home/sources/yel.png";
 // import Header from "../Header/Header";
 // import Navbar2 from "../Navbar/Navbar";
 import Navbar from "../Navbar/Navbar";
 import CarouselHome from "../Carousel/Carousel";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -56,8 +56,11 @@ const Home = () => {
         </p>
       </div>
       <p className="top-places">Top Places</p>
-
       <div className="four-cards dost">
+
+      <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={burana} alt="" className="card-image" />
@@ -70,7 +73,11 @@ const Home = () => {
             </p>
           </div>
         </div>
-
+        </Link>
+      
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={tashrabat} alt="" className="card-image" />
@@ -84,7 +91,11 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
 
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={ik} alt="" className="card-image" />
@@ -99,7 +110,11 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
 
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={sulaimantoo} alt="" className="card-image" />
@@ -114,6 +129,11 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
+
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={sarychelek} alt="" className="card-image" />
@@ -127,7 +147,11 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
 
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={jetioguz} alt="" className="card-image" />
@@ -141,7 +165,11 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
 
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={sarychelek} alt="" className="card-image" />
@@ -155,7 +183,12 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
 
+
+        <Link to="/tours"
+      style={{color:"black"}}
+      >
         <div className="second-section-container">
           <div className="card second-section-half">
             <img src={jetioguz} alt="" className="card-image" />
@@ -169,6 +202,7 @@ const Home = () => {
             </p>
           </div>
         </div>
+        </Link>
       </div>
       <CarouselHome />
     </>

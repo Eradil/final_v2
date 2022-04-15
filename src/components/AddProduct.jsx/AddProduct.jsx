@@ -1,4 +1,4 @@
-import { Button, Form, Input, InputNumber, Modal } from "antd";
+import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
 import React, { useContext, useState } from "react";
 import { contextProducts } from "../../context/contextProducts";
 import "./AddProduct.css";
@@ -66,8 +66,8 @@ const AddProduct = () => {
             <Input.TextArea placeholder="description" />
           </Form.Item>
           <Form.Item
-            label="Produced"
-            name="produced"
+            label="Made in"
+            name="made in"
             rules={[
               {
                 required: true,
@@ -90,8 +90,8 @@ const AddProduct = () => {
             <InputNumber min={1} style={{ width: "100%" }} />
           </Form.Item>
           <Form.Item
-            label="Details"
-            name="details"
+            label="Category"
+            name="type"
             rules={[
               {
                 required: true,
@@ -99,7 +99,12 @@ const AddProduct = () => {
               },
             ]}
           >
-            <Input placeholder="details" />
+            <Select>
+              <Select.Option value={"music"}>Music</Select.Option>
+              <Select.Option value={"clothes"}>Clothes</Select.Option>
+              <Select.Option value={"interior"}>Interior</Select.Option>\{" "}
+              <Select.Option value={"tours"}>Tours</Select.Option>
+            </Select>
           </Form.Item>
           <Form.Item
             label="Image"

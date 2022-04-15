@@ -1,90 +1,64 @@
-import { Input, Pagination } from "antd";
+import { Pagination } from "antd";
 import React, { useContext, useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { contextProducts } from "../../context/contextProducts";
-import Filters from "../Filters/Filters";
+// import CardProducts from "../CardProducts/CardProducts";
 import Navbar from "../Navbar/Navbar";
-import ProductCard from "./ProductCard";
+import ProductCard from "../Products/ProductCard";
+import Search from "../Search/Search";
 import "./ProductList.css";
 
 const ProductsList = () => {
-  const { getProducts, products, productsCount } = useContext(contextProducts);
   const [searchParams, setSearchParams] = useSearchParams();
-  const [showFilters, setShowFilters] = useState(false);
-  const [searchValue, setSearchValue] = useState(
-    searchParams.get("q") ? searchParams.get("q") : ""
-  );
-  const [name, setName] = useState([]);
-  const [price, setPrice] = useState([1, 1000000]);
+  const { getProducts, products, productsCount, loading } =
+    useContext(contextProducts);
+
   const [page, setPage] = useState(
     searchParams.get("_page") ? searchParams.get("_page") : 1
   );
+  const [searchValue, setSearchValue] = useState(
+    searchParams.get("q") ? searchParams.get("q") : ""
+  );
   const [limit, setLimit] = useState(5);
 
-  useEffect(() => {
-    getProducts();
-  }, []);
+  const [name, setName] = useState([]);
+  const [price, setPrice] = useState([1, 1000000]);
+  const location = useLocation();
 
   useEffect(() => {
     setSearchParams({
+      type: location.pathname.slice(1, location.pathname.length),
+      _page: page,
+      _limit: limit,
       q: searchValue,
       name: name,
       price_gte: price[0],
       price_lte: price[1],
-      _page: page,
-      _limit: limit,
     });
-  }, [searchValue, name, price, page, limit]);
+  }, [page, limit, searchValue, price, name]);
   useEffect(() => {
     getProducts();
   }, [searchParams]);
-  console.log(products);
+
   return (
     <div>
       <Navbar />
-      <div className="container">
-        <div className="list_title">
-          <h2>
-            The Kyrgyz people have used various musical instruments since
-            ancient times. Music accompanied the Kyrgyz in various life
-            situations - from military campaigns and meeting guests to solemn
-            festivities and commemorations.
-          </h2>
-        </div>
-        <div className="search_filters">
-          <div className="products-search">
-            <Input.Search
-              placeholder="Search..."
-              className="search"
-              value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)}
-            />
-            <div
-              className="filter_txt"
-              onClick={() => setShowFilters(!showFilters)}
-            >
-              {showFilters ? "HIDE FILTERS" : "SHOW FILTERS"}
-            </div>
-
-            {showFilters ? (
-              <Filters
-                brand={name}
-                setBrand={setName}
-                price={price}
-                setPrice={setPrice}
-                className="filters"
-              />
-            ) : null}
-          </div>
-        </div>
-
-        <div className="product_list">
-          {products.map((item) => (
-            <div key={item.id}>
-              <ProductCard key={item.id} item={item} />
-            </div>
-          ))}
-        </div>
+      <Search
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        name={name}
+        setName={setName}
+        price={price}
+        setPrice={setPrice}
+      />
+      <div className="cards-by-type">
+        {products.map((item) => (
+          <ProductCard key={item.id} item={item} />
+        ))}
+      </div>
+      {productsCount == 0 ? (
+        <h1>Не найдено</h1>
+      ) : (
         <div className="pagination">
           <Pagination
             total={+productsCount}
@@ -97,7 +71,7 @@ const ProductsList = () => {
             }}
           />
         </div>
-      </div>
+      )}
     </div>
   );
 };

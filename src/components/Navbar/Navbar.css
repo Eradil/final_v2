@@ -16,10 +16,33 @@ a:hover {
   /* position: fixed; */
 }
 
-#eagle {
-  width: 50px;
+#eagle{
+  width: 80px;
 }
 
 .navbar__inner {
-  width: 60%;
+  width: 80%;
 }
+
+/* @media all and (max-width: 426px) {
+  .logoToHide {
+    display: none;
+  }
+}
+@media all and (min-width: 768px) {
+  .logoToHide {
+    display: block;
+  }
+} */
+
+/* @media all and (max-width: 426px) {
+  .bigLogoToHide {
+    display: block;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .bigLogoToHide {
+    display: none;
+  }
+} */
