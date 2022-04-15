@@ -5,7 +5,7 @@
 .details {
   display: flex;
   justify-content: space-between;
-  margin: 0 20px;
+  margin: 50px 20px;
 }
 .details_left {
   margin-right: 20px;

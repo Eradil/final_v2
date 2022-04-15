@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 //
 export const contextProducts = React.createContext();
 //
@@ -9,7 +9,7 @@ const CASE_GET_PRODUCTS = "CASE_GET_PRODUCTS";
 const CASE_GET_ONE_PRODUCT = "CASE_GET_ONE_PRODUCT";
 // cases end
 //
-let API = "http://localhost:8001/products";
+let API = "http://localhost:8000/products";
 //
 const INIT_STATE = {
   products: [],
@@ -39,16 +39,16 @@ const reducer = (state = INIT_STATE, action) => {
 
 const ContextProductsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
-
+  const [loading, setLoading] = useState();
   async function getProducts() {
-    let result = await axios(API
-    +window.location.search
-    );
+    setLoading(true);
+    let result = await axios(`${API}${window.location.search}`);
     console.log(result, "res");
     dispatch({
       type: CASE_GET_PRODUCTS,
       payload: result,
     });
+    setLoading(false);
   }
 
   async function createProduct(newProduct) {
@@ -79,6 +79,7 @@ const ContextProductsProvider = ({ children }) => {
           products: state.products,
           oneProduct: state.oneProduct,
           productsCount: state.productsCount,
+          loading,
           getProducts,
           deleteProduct,
           createProduct,

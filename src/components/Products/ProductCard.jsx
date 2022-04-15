@@ -24,48 +24,41 @@ const ProductCard = ({ item }) => {
     <div>
       <Card
         style={{ margin: "10px" }}
-        className="card"
+        className="product_card"
         hoverable
         cover={
           <img className="product_card_img" alt="example" src={item.image} />
         }
       >
         <Meta title={item.name} description={item.produced} />
+        <p>{item.price}com</p>
 
-        <div className="card_icons">
-          <Link to={"#"}>
-            <HeartOutlined
-              style={{ fontSize: "25px", color: checkItemX ? "red" : "white" }}
-              onClick={() => {
-                addProductToFavorite(item);
-                setCheckItemX(checkItemInFavorite(item.id));
-              }}
-            />
-          </Link>
-          <Link to={"#"}>
-            <ShoppingCartOutlined
-              style={{ fontSize: "25px", color: checkItem ? "red" : "white" }}
-              onClick={() => {
-                addProductToCart(item);
-                setCheckItem(checkItemInCart(item.id));
-              }}
-            />
-          </Link>
-          <Link to={"#"}>
-            <AudioOutlined />
-          </Link>
+        <div className="card_icons1">
+          <Rate allowHalf defaultValue={2.5} />
+          <EllipsisOutlined onClick={() => navigate(`/product/${item.id}`)} />
+        </div>
+        <div className="product_card_icons">
+          <HeartOutlined
+            className="product_card_icon1"
+            style={{ fontSize: "25px", color: checkItemX ? "red" : "white" }}
+            onClick={() => {
+              addProductToFavorite(item);
+              setCheckItemX(checkItemInFavorite(item.id));
+            }}
+          />
+
+          <ShoppingCartOutlined
+            className="product_card_icon1"
+            style={{ fontSize: "25px", color: checkItem ? "red" : "white" }}
+            onClick={() => {
+              addProductToCart(item);
+              setCheckItem(checkItemInCart(item.id));
+            }}
+          />
+
+          <AudioOutlined className="product_card_icon1" />
         </div>
       </Card>
-      <div className="card_descr">
-        <p>{item.name}</p>
-        <p>{item.price}</p>
-      </div>
-      <div className="card_icons1">
-        <Rate allowHalf defaultValue={2.5} />
-        <EllipsisOutlined onClick={() => navigate(`/product/${item.id}`)} />
-        {/* 
-        <p style={{ color: "black" }}>{item.name}</p> */}
-      </div>
     </div>
   );
 };

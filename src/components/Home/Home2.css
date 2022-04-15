@@ -1,0 +1,25 @@
+.new-main-page{
+    display: flex;
+}
+
+.main-video{
+    width: 100vw;
+    /* margin-left: 50px; */
+    z-index: 2;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+.main2-title{
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+    /* z-index: 1; */
+}
+
+#bigimg{
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+}

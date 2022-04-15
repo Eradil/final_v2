@@ -170,6 +170,24 @@
       "type": "tours",
       "image": "https://too.kg/wp-content/uploads/1408790825_old-burana-tower-1024x536.jpg",
       "id": 21
+    },
+    {
+      "name": "name",
+      "description": "fdshjk",
+      "made in": "szfdhj",
+      "price": 12,
+      "type": "music",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Stamps_of_Kyrgyzstan%2C_2011-34.jpg/330px-Stamps_of_Kyrgyzstan%2C_2011-34.jpg",
+      "id": 22
+    },
+    {
+      "name": "kkkkk",
+      "description": "ikonon",
+      "made in": "kiko",
+      "price": 952,
+      "type": "interior",
+      "image": "https://images.unsplash.com/photo-1649829785836-d5ac103e825c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "id": 23
     }
   ]
 }

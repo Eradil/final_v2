@@ -1,4 +1,4 @@
-import { Button, Form, Input, InputNumber, Modal } from "antd";
+import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
 import React, { useContext, useState } from "react";
 import { contextProducts } from "../../context/contextProducts";
 import "./AddProduct.css";
@@ -99,7 +99,12 @@ const AddProduct = () => {
               },
             ]}
           >
-            <Input placeholder="details" />
+            <Select>
+              <Select.Option value={"music"}>Music</Select.Option>
+              <Select.Option value={"clothes"}>Clothes</Select.Option>
+              <Select.Option value={"interior"}>Interior</Select.Option>\{" "}
+              <Select.Option value={"tours"}>Tours</Select.Option>
+            </Select>
           </Form.Item>
           <Form.Item
             label="Image"
