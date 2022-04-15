@@ -7,7 +7,7 @@ import {
 import "./ProductCard.css";
 import { Card, Rate } from "antd";
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { cartContext } from "../../context/cartContext";
 import { favoriteContext } from "../../context/favoriteContext";
 const { Meta } = Card;

@@ -1,7 +1,7 @@
 import { Input } from "antd";
-import React, { useContext, useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { contextProducts } from "../../context/contextProducts";
+import React, { useState } from "react";
+// import { useSearchParams } from "react-router-dom";
+// import { contextProducts } from "../../context/contextProducts";
 import Filters from "../Filters/Filters";
 
 const Search = ({

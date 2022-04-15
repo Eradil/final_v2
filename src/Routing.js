@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./components/About/About";
 
 import AdminProduct from "./components/AdminProduct/AdminProduct";
 import Cart from "./components/Cart/Cart";
@@ -12,6 +13,8 @@ import Payment from "./components/Payment/Payment";
 // import Clothes from "./components/PPclothes/Clothes";
 // import Navbar from "./components/Navbar/Navbar";
 import ProductsList from "./components/Products/ProductsList";
+import SignIn from "./components/SignIn/SignIn";
+import SignUp from "./components/SignUp/SignUp";
 
 const Routing = () => {
   let PUBLIC_ROUTE = [
@@ -69,6 +72,21 @@ const Routing = () => {
     {
       link: "/main",
       element: <Main />,
+      id: 11,
+    },
+    {
+      link: "/signin",
+      element: <SignIn />,
+      id: 11,
+    },
+    {
+      link: "/signup",
+      element: <SignUp />,
+      id: 11,
+    },
+    {
+      link: "/about",
+      element: <About />,
       id: 11,
     },
 

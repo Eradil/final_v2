@@ -6,19 +6,27 @@ import {
   PhoneOutlined,
   ShoppingCartOutlined,
   ShoppingOutlined,
+  UserOutlined,
 } from "@ant-design/icons";
-import { Badge } from "antd";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Navbar.css";
 // import eagle from "./sources/eagle.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cartContext } from "../../context/cartContext";
 import { favoriteContext } from "../../context/favoriteContext";
+import { useAuthContext } from "../../context/authContext";
 
 const Navbar = () => {
-  // const navigate = useNavigate();
   const { cartLength } = useContext(cartContext);
   const { favoriteLength } = useContext(favoriteContext);
+  const { user, checkAuth, logout } = useAuthContext();
+  const location = useLocation();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      checkAuth();
+    }
+  }, []);
 
   return (
     <div className="navbar">
@@ -63,22 +71,35 @@ const Navbar = () => {
             </Menu.Item>
           </Link>
 
-          <Link to={"/signin"}>
+          {user ? (
+            <h2>
+              User: {user}{" "}
+              <Menu.Item
+                style={{ color: "black", listStyle: "none" }}
+                icon={<UserOutlined />}
+                onClick={logout}
+              >
+                Logout
+              </Menu.Item>
+            </h2>
+          ) : location.pathname === "/signup" ? (
             <Menu.Item
               style={{ color: "black", listStyle: "none" }}
-              icon={<LockOutlined />}
+              icon={<UserOutlined />}
+              onClick={() => navigate("/signin")}
             >
-              Sign In
+              Login
             </Menu.Item>
-          </Link>
-          <Link to={"/register"}>
+          ) : (
             <Menu.Item
               style={{ color: "black", listStyle: "none" }}
-              icon={<LockOutlined />}
+              icon={<UserOutlined />}
+              onClick={() => navigate("/signup")}
             >
               Register
             </Menu.Item>
-          </Link>
+          )}
+
           <Link to={"/admin"}>
             <Menu.Item
               style={{ color: "black", listStyle: "none" }}

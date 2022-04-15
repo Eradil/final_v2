@@ -5,17 +5,19 @@ import Routing from "./Routing";
 import "./App.css";
 import CartContextProvider from "./context/cartContext";
 import FavoriteContextProvider from "./context/favoriteContext";
-// import Navbar from "./components/Navbar/Navbar";
+import AuthContextProvider from "./context/authContext";
 const App = () => {
   return (
     <div>
-      <FavoriteContextProvider>
-        <ContextProductsProvider>
-          <CartContextProvider>
-            <Routing />
-          </CartContextProvider>
-        </ContextProductsProvider>
-      </FavoriteContextProvider>
+      <AuthContextProvider>
+        <FavoriteContextProvider>
+          <ContextProductsProvider>
+            <CartContextProvider>
+              <Routing />
+            </CartContextProvider>
+          </ContextProductsProvider>
+        </FavoriteContextProvider>
+      </AuthContextProvider>
     </div>
   );
 };
