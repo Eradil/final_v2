@@ -24,10 +24,10 @@ import bigimg from "./sources2/bigimg.jpeg";
 const Home = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="new-main-page">
         <video className="main-video" autoPlay muted loop src={video}></video>
-        <p className="main2-title">Because You're an Adventurer, Not a Tourist</p>
+        {/* <p className="main2-title">Because You're an Adventurer, Not a Tourist</p> */}
       </div>
       <div>
         <img id="bigimg" src={bigimg} alt="" />
