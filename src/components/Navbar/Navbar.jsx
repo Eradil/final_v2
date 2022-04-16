@@ -1,6 +1,5 @@
 import { Menu } from "antd";
 import {
-  HeartOutlined,
   HomeOutlined,
   LockOutlined,
   PhoneOutlined,
@@ -10,15 +9,15 @@ import {
 } from "@ant-design/icons";
 import React, { useContext, useEffect } from "react";
 import "./Navbar.css";
-// import eagle from "./sources/eagle.svg";
+
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cartContext } from "../../context/cartContext";
 import { favoriteContext } from "../../context/favoriteContext";
 import { useAuthContext } from "../../context/authContext";
 
 const Navbar = () => {
-  const { cartLength } = useContext(cartContext);
-  const { favoriteLength } = useContext(favoriteContext);
+  // const { cartLength } = useContext(cartContext);
+  // const { favoriteLength } = useContext(favoriteContext);
   const { user, checkAuth, logout } = useAuthContext();
   const location = useLocation();
   const navigate = useNavigate();
@@ -31,7 +30,9 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="header_logo">
-        {/* <img id="eagle" src={eagle} alt="" /> */}
+        <h1 className="logo_txt">
+          Kyrgyz<span>Buy</span>
+        </h1>
       </div>
       <div className="navbar__inner">
         <Menu
@@ -108,16 +109,7 @@ const Navbar = () => {
               Admin
             </Menu.Item>
           </Link>
-          <Link to={"/favorite"}>
-            {/* <Badge count={+favoriteLength}> */}
-            <Menu.Item
-              style={{ color: "black", listStyle: "none" }}
-              icon={<HeartOutlined />}
-            >
-              Favorite
-            </Menu.Item>
-            {/* </Badge> */}
-          </Link>
+
           <Link to={"/cart"}>
             {/* <Badge count={+cartLength}> */}
             <Menu.Item

@@ -55,153 +55,137 @@ const Home = () => {
           experience.
         </p>
       </div>
-      <p className="top-places">Top Places</p>
+      <p className="top-places">
+        Top <span>Places</span>
+      </p>
       <div className="four-cards dost">
-
-      <Link to="/tours"
-      style={{color:"black"}}
-      >
-        <div className="second-section-container">
-          <div className="card second-section-half">
-            <img src={burana} alt="" className="card-image" />
-            <h3 className="card-title">Burana tower</h3>
+        <Link to="/tours" style={{ color: "black" }}>
+          <div className="second-section-container">
+            <div className="card second-section-half">
+              <img src={burana} alt="" className="card-image" />
+              <h3 className="card-title">Burana tower</h3>
+            </div>
+            <div className="second-section-half">
+              <p className="card-description">
+                The Burana Tower (Russian: Башня Бурана) is a large minaret in
+                the Chüy Valley in northern Kyrgyzstan.
+              </p>
+            </div>
           </div>
-          <div className="second-section-half">
-            <p className="card-description">
-              The Burana Tower (Russian: Башня Бурана) is a large minaret in the
-              Chüy Valley in northern Kyrgyzstan.
-            </p>
-          </div>
-        </div>
-        </Link>
-      
-        <Link to="/tours"
-      style={{color:"black"}}
-      >
-        <div className="second-section-container">
-          <div className="card second-section-half">
-            <img src={tashrabat} alt="" className="card-image" />
-            <h3 className="card-title">Tash rabat</h3>
-          </div>
-          <div className="second-section-half">
-            <p className="card-description">
-              Tash Rabat is a well-preserved 15th century stone caravanserai in
-              At Bashy district, Naryn Province, Kyrgyzstan located at an
-              altitude of 3,200 meters.
-            </p>
-          </div>
-        </div>
         </Link>
 
-        <Link to="/tours"
-      style={{color:"black"}}
-      >
-        <div className="second-section-container">
-          <div className="card second-section-half">
-            <img src={ik} alt="" className="card-image" />
-            <h3 className="card-title">Isyk-Kul lake</h3>
+        <Link to="/tours" style={{ color: "black" }}>
+          <div className="second-section-container">
+            <div className="card second-section-half">
+              <img src={tashrabat} alt="" className="card-image" />
+              <h3 className="card-title">Tash rabat</h3>
+            </div>
+            <div className="second-section-half">
+              <p className="card-description">
+                Tash Rabat is a well-preserved 15th century stone caravanserai
+                in At Bashy district, Naryn Province, Kyrgyzstan located at an
+                altitude of 3,200 meters.
+              </p>
+            </div>
           </div>
-          <div className="second-section-half">
-            <p className="card-description">
-              Issyk-Kul is an endorheic lake (i.e., without outflow) in the
-              Northern Tian Shan mountains in Eastern Kyrgyzstan. It is the
-              seventh-deepest lake in the world, the tenth-largest lake in the
-              world by volume
-            </p>
-          </div>
-        </div>
         </Link>
 
-        <Link to="/tours"
-      style={{color:"black"}}
-      >
-        <div className="second-section-container">
-          <div className="card second-section-half">
-            <img src={sulaimantoo} alt="" className="card-image" />
-            <h3 className="card-title">Sulaiman Too Mountain</h3>
+        <Link to="/tours" style={{ color: "black" }}>
+          <div className="second-section-container">
+            <div className="card second-section-half">
+              <img src={ik} alt="" className="card-image" />
+              <h3 className="card-title">Isyk-Kul lake</h3>
+            </div>
+            <div className="second-section-half">
+              <p className="card-description">
+                Issyk-Kul is an endorheic lake (i.e., without outflow) in the
+                Northern Tian Shan mountains in Eastern Kyrgyzstan. It is the
+                seventh-deepest lake in the world, the tenth-largest lake in the
+                world by volume
+              </p>
+            </div>
           </div>
-          <div className="second-section-half">
-            <p className="card-description">
-              The Sulayman Mountain is the only World Heritage Site located
-              entirely in the country of Kyrgyzstan. It is located in the city
-              of Osh and was once a major place of Muslim and pre-Muslim
-              pilgrimage.
-            </p>
-          </div>
-        </div>
         </Link>
 
-        <Link to="/tours"
-      style={{color:"black"}}
-      >
-        <div className="second-section-container">
-          <div className="card second-section-half">
-            <img src={sarychelek} alt="" className="card-image" />
-            <h3 className="card-title">Sary-Chelek lake</h3>
+        <Link to="/tours" style={{ color: "black" }}>
+          <div className="second-section-container">
+            <div className="card second-section-half">
+              <img src={sulaimantoo} alt="" className="card-image" />
+              <h3 className="card-title">Sulaiman Too Mountain</h3>
+            </div>
+            <div className="second-section-half">
+              <p className="card-description">
+                The Sulayman Mountain is the only World Heritage Site located
+                entirely in the country of Kyrgyzstan. It is located in the city
+                of Osh and was once a major place of Muslim and pre-Muslim
+                pilgrimage.
+              </p>
+            </div>
           </div>
-          <div className="second-section-half">
-            <p className="card-description">
-              Sary-Chelek Lake is situated at Jalal-Abad Region (at 1,873 m
-              asl), Western Part of Kyrgyzstan at the territory of Sary-Chelek
-              Nature Reserve.
-            </p>
-          </div>
-        </div>
         </Link>
 
-        <Link to="/tours"
-      style={{color:"black"}}
-      >
-        <div className="second-section-container">
-          <div className="card second-section-half">
-            <img src={jetioguz} alt="" className="card-image" />
-            <h3 className="card-title">Jeti Oguz Mountain</h3>
+        <Link to="/tours" style={{ color: "black" }}>
+          <div className="second-section-container">
+            <div className="card second-section-half">
+              <img src={sarychelek} alt="" className="card-image" />
+              <h3 className="card-title">Sary-Chelek lake</h3>
+            </div>
+            <div className="second-section-half">
+              <p className="card-description">
+                Sary-Chelek Lake is situated at Jalal-Abad Region (at 1,873 m
+                asl), Western Part of Kyrgyzstan at the territory of Sary-Chelek
+                Nature Reserve.
+              </p>
+            </div>
           </div>
-          <div className="second-section-half">
-            <p className="card-description">
-              Jeti Oguz is a sandstone formation about 25 km (15 miles)
-              southwest of Karakol. The name means “seven bulls”, which comes
-              from the fact that the rocks look like seven bulls.
-            </p>
-          </div>
-        </div>
         </Link>
 
-        <Link to="/tours"
-      style={{color:"black"}}
-      >
-        <div className="second-section-container">
-          <div className="card second-section-half">
-            <img src={sarychelek} alt="" className="card-image" />
-            <h3 className="card-title">Sary-Chelek lake</h3>
+        <Link to="/tours" style={{ color: "black" }}>
+          <div className="second-section-container">
+            <div className="card second-section-half">
+              <img src={jetioguz} alt="" className="card-image" />
+              <h3 className="card-title">Jeti Oguz Mountain</h3>
+            </div>
+            <div className="second-section-half">
+              <p className="card-description">
+                Jeti Oguz is a sandstone formation about 25 km (15 miles)
+                southwest of Karakol. The name means “seven bulls”, which comes
+                from the fact that the rocks look like seven bulls.
+              </p>
+            </div>
           </div>
-          <div className="second-section-half">
-            <p className="card-description">
-              Sary-Chelek Lake is situated at Jalal-Abad Region (at 1,873 m
-              asl), Western Part of Kyrgyzstan at the territory of Sary-Chelek
-              Nature Reserve.
-            </p>
-          </div>
-        </div>
         </Link>
 
+        <Link to="/tours" style={{ color: "black" }}>
+          <div className="second-section-container">
+            <div className="card second-section-half">
+              <img src={sarychelek} alt="" className="card-image" />
+              <h3 className="card-title">Sary-Chelek lake</h3>
+            </div>
+            <div className="second-section-half">
+              <p className="card-description">
+                Sary-Chelek Lake is situated at Jalal-Abad Region (at 1,873 m
+                asl), Western Part of Kyrgyzstan at the territory of Sary-Chelek
+                Nature Reserve.
+              </p>
+            </div>
+          </div>
+        </Link>
 
-        <Link to="/tours"
-      style={{color:"black"}}
-      >
-        <div className="second-section-container">
-          <div className="card second-section-half">
-            <img src={jetioguz} alt="" className="card-image" />
-            <h3 className="card-title">Jeti Oguz Mountain</h3>
+        <Link to="/tours" style={{ color: "black" }}>
+          <div className="second-section-container">
+            <div className="card second-section-half">
+              <img src={jetioguz} alt="" className="card-image" />
+              <h3 className="card-title">Jeti Oguz Mountain</h3>
+            </div>
+            <div className="second-section-half">
+              <p className="card-description">
+                Jeti Oguz is a sandstone formation about 25 km (15 miles)
+                southwest of Karakol. The name means “seven bulls”, which comes
+                from the fact that the rocks look like seven bulls.
+              </p>
+            </div>
           </div>
-          <div className="second-section-half">
-            <p className="card-description">
-              Jeti Oguz is a sandstone formation about 25 km (15 miles)
-              southwest of Karakol. The name means “seven bulls”, which comes
-              from the fact that the rocks look like seven bulls.
-            </p>
-          </div>
-        </div>
         </Link>
       </div>
       <CarouselHome />
