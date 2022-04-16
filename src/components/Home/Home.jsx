@@ -26,7 +26,7 @@ const Home = () => {
     <>
       {/* <Navbar /> */}
       <div className="new-main-page">
-        <video className="main-video" autoPlay muted loop src={video}></video>
+        {/* <video className="main-video" autoPlay muted loop src={video}></video> */}
         {/* <p className="main2-title">Because You're an Adventurer, Not a Tourist</p> */}
       </div>
       <div>
