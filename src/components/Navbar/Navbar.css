@@ -2,24 +2,24 @@ a {
   color: #111;
   /* border-bottom: 1px solid #fff; */
 }
-a:hover {
-  /* border-bottom: 1px solid #111; */
-}
+/* a:hover {
+  border-bottom: 1px solid #111;
+} */
 
 .navbar {
-  background: rgba(0,0,0,.8);
-  /* background-color: black; */
+  background: rgba(0, 0, 0, 0.1);
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-around;
   /* overflow-x: hidden; */
-  position: fixed;
+  /* position: fixed; */
   z-index: 5;
 }
 
-#eagle{
+#eagle {
   width: 80px;
+  z-index: 5;
 }
 
 .navbar__inner {
@@ -48,3 +48,13 @@ a:hover {
     display: none;
   }
 } */
+
+.logo_txt span {
+  color: rgb(214, 48, 48);
+
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "Pacifico", cursive;
+}
+.logo_txt {
+  font-family: "Pacifico", cursive;
+}

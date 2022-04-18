@@ -136,15 +136,6 @@
       "id": 17
     },
     {
-      "name": "Ala-kiyiz",
-      "description": "Ala Kiyiz is a traditional felt carpet of the Kyrgyz people, made according to the pressing pattern.\n\nFelted wool rug is made of natural merino wool in brown and white colors. Ala Kiyiz is performed in the traditional Kyrgyz technique \"bakyp saluu\", which means the imposition of wool along and across. This ensures durability and high quality of the product. Ala Kiyiz is decorated with beautiful tulips that grow on the hills of Kyrgyzstan.",
-      "made in": "Kyrgyzstan",
-      "price": 430,
-      "type": "interior",
-      "image": "http://nomad-lodge.com/wp-content/uploads/2020/06/alakyyz.jpg",
-      "id": 18
-    },
-    {
       "name": "Kurak",
       "description": "Kurak is the name given to various types of items made from scraps sewn together. The name comes from the word \"kura\", which means \"sewn together - assembled from separate pieces\" and refers to both finished products and the method of their production. This type of handicraft can be found throughout Central Asia. It was also practiced throughout Kyrgyzstan, but especially in the south.",
       "made in": "Kyrgyzstan",
@@ -170,24 +161,6 @@
       "type": "tours",
       "image": "https://too.kg/wp-content/uploads/1408790825_old-burana-tower-1024x536.jpg",
       "id": 21
-    },
-    {
-      "name": "name",
-      "description": "fdshjk",
-      "made in": "szfdhj",
-      "price": 12,
-      "type": "music",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Stamps_of_Kyrgyzstan%2C_2011-34.jpg/330px-Stamps_of_Kyrgyzstan%2C_2011-34.jpg",
-      "id": 22
-    },
-    {
-      "name": "kkkkk",
-      "description": "ikonon",
-      "made in": "kiko",
-      "price": 952,
-      "type": "interior",
-      "image": "https://images.unsplash.com/photo-1649829785836-d5ac103e825c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "id": 23
     }
   ]
 }

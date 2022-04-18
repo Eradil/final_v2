@@ -6,24 +6,36 @@ import {
   PhoneOutlined,
   ShoppingCartOutlined,
   ShoppingOutlined,
+  UserOutlined,
 } from "@ant-design/icons";
-import { Badge } from "antd";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Navbar.css";
-// import eagle from "./sources/eagle.svg";
-import { Link, useNavigate } from "react-router-dom";
+
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cartContext } from "../../context/cartContext";
 import { favoriteContext } from "../../context/favoriteContext";
+import { useAuthContext } from "../../context/authContext";
 
 const Navbar = () => {
-  // const navigate = useNavigate();
-  const { cartLength } = useContext(cartContext);
-  const { favoriteLength } = useContext(favoriteContext);
+  // const { cartLength } = useContext(cartContext);
+  // const { favoriteLength } = useContext(favoriteContext);
+  const { user, checkAuth, logout } = useAuthContext();
+  const location = useLocation();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      checkAuth();
+    }
+  }, []);
 
   return (
     <div className="navbar">
       <div className="header_logo">
-        {/* <img id="eagle" src={eagle} alt="" /> */}
+        <h1 className="logo_txt">
+          {/* <Link to={'/'}> */}
+            Kyrgyz<span>Buy</span>
+          {/* </Link> */}
+        </h1>
       </div>
       <div className="navbar__inner">
         <Menu
@@ -40,7 +52,7 @@ const Navbar = () => {
         >
           <Link to={"/"}>
             <Menu.Item
-              style={{ color: "white", listStyle: "none" }}
+              style={{ color: "black", listStyle: "none" }}
               icon={<HomeOutlined />}
             >
               Home
@@ -48,7 +60,7 @@ const Navbar = () => {
           </Link>
           <Link to={"/main"}>
             <Menu.Item
-              style={{ color: "white", listStyle: "none" }}
+              style={{ color: "black", listStyle: "none" }}
               icon={<ShoppingCartOutlined />}
             >
               Category
@@ -56,51 +68,64 @@ const Navbar = () => {
           </Link>
           <Link to={"/contacts"}>
             <Menu.Item
-              style={{ color: "white", listStyle: "none" }}
+              style={{ color: "black", listStyle: "none" }}
               icon={<PhoneOutlined />}
             >
               Contacts
             </Menu.Item>
           </Link>
 
-          <Link to={"/signin"}>
+          {user ? (
+            <h2>
+              User: {user}{" "}
+              <Menu.Item
+                style={{ color: "black", listStyle: "none" }}
+                icon={<UserOutlined />}
+                onClick={logout}
+              >
+                Logout
+              </Menu.Item>
+            </h2>
+          ) : location.pathname === "/signup" ? (
             <Menu.Item
-              style={{ color: "white", listStyle: "none" }}
-              icon={<LockOutlined />}
+              style={{ color: "black", listStyle: "none" }}
+              icon={<UserOutlined />}
+              onClick={() => navigate("/signin")}
             >
-              Sign In
+              Login
             </Menu.Item>
-          </Link>
-          <Link to={"/register"}>
+          ) : (
             <Menu.Item
-              style={{ color: "white", listStyle: "none" }}
-              icon={<LockOutlined />}
+              style={{ color: "black", listStyle: "none" }}
+              icon={<UserOutlined />}
+              onClick={() => navigate("/signup")}
             >
               Register
             </Menu.Item>
-          </Link>
+          )}
+
           <Link to={"/admin"}>
             <Menu.Item
-              style={{ color: "white", listStyle: "none" }}
+              style={{ color: "black", listStyle: "none" }}
               icon={<LockOutlined />}
             >
               Admin
             </Menu.Item>
           </Link>
           <Link to={"/favorite"}>
-            {/* <Badge count={+favoriteLength}> */}
+            {/* <Badge count={+cartLength}> */}
             <Menu.Item
-              style={{ color: "white", listStyle: "none" }}
+              style={{ color: "black", listStyle: "none" }}
               icon={<HeartOutlined />}
             >
-              Favorite
+              Favorites
             </Menu.Item>
             {/* </Badge> */}
           </Link>
           <Link to={"/cart"}>
             {/* <Badge count={+cartLength}> */}
             <Menu.Item
-              style={{ color: "white", listStyle: "none" }}
+              style={{ color: "black", listStyle: "none" }}
               icon={<ShoppingOutlined />}
             >
               Cart

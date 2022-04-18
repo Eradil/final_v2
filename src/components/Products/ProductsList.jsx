@@ -10,8 +10,7 @@ import "./ProductList.css";
 
 const ProductsList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { getProducts, products, productsCount, loading } =
-    useContext(contextProducts);
+  const { getProducts, products, productsCount } = useContext(contextProducts);
 
   const [page, setPage] = useState(
     searchParams.get("_page") ? searchParams.get("_page") : 1
@@ -56,7 +55,7 @@ const ProductsList = () => {
           <ProductCard key={item.id} item={item} />
         ))}
       </div>
-      {productsCount == 0 ? (
+      {productsCount === 0 ? (
         <h1>Не найдено</h1>
       ) : (
         <div className="pagination">

@@ -15,6 +15,7 @@ const Cart = () => {
   // console.log(cart);
   return (
     <>
+
       <Navbar />
       <div style={{}} className="cart-cart container products-total">
         <List
@@ -93,3 +94,8 @@ const Cart = () => {
 };
 
 export default Cart;
+
+
+
+
+

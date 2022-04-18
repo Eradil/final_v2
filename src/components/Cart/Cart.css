@@ -42,9 +42,9 @@
     align-items: center;
   }
 }
-.cart-cart{
-    /* margin-left: 250px; */
-}
+/* .cart-cart{
+    margin-left: 250px;
+} */
 
 .products-in-cart{
   display: flex;
