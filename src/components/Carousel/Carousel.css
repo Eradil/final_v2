@@ -1,0 +1,33 @@
+.carousel_inner {
+  width: 80vw;
+  height: auto;
+  margin: 20px auto;
+}
+
+.carousel_img {
+  filter: alpha(Opacity=50);
+  opacity: 0.3;
+  width: 80vw;
+
+  height: auto;
+  position: relative;
+  /* width: 100%; */
+}
+
+.carousel_txt {
+  position: absolute;
+  bottom: 70px;
+  margin: 0 auto;
+  width: 80vw;
+  text-align: center;
+  color: aliceblue;
+}
+@media screen and (max-width: 426px) {
+  .carousel_txt {
+    font-size: 12px;
+  }
+}
+
+.carousel_body {
+  margin-bottom: 0;
+}
