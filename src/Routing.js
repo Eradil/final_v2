@@ -7,6 +7,7 @@ import Cart from "./components/Cart/Cart";
 import Details from "./components/Details/Details";
 import EditProduct from "./components/EditProduct/EditProduct";
 import Favorite from "./components/Favorite/Favorite";
+import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Main from "./components/Main/Main";
 import Payment from "./components/Payment/Payment";
@@ -15,6 +16,7 @@ import Payment from "./components/Payment/Payment";
 import ProductsList from "./components/Products/ProductsList";
 import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
+import Visa from "./components/Visa/Visa";
 
 const Routing = () => {
   let PUBLIC_ROUTE = [
@@ -84,6 +86,11 @@ const Routing = () => {
       element: <SignUp />,
       id: 11,
     },
+    {
+      link: "/visa",
+      element: <Visa />,
+      id: 11,
+    },
   ];
   let ADMIN_ROUTE = [
     {
@@ -110,6 +117,7 @@ const Routing = () => {
             <Route key={item.id} path={item.link} element={item.element} />
           ))}
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
