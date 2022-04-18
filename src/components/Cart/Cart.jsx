@@ -24,7 +24,7 @@ const Cart = () => {
           footer={
             <div>
               <h1>Total: {cart.totalPrice}$</h1>
-              <Button id="btn-order" onClick={() => navigate("/payment")}>
+              <Button id="btn-order" onClick={() => navigate("/visa")}>
                 Order
               </Button>
             </div>
@@ -79,7 +79,10 @@ const Cart = () => {
                       </div>
                     </div>
                     <div></div>
-                    <Button style={{width:"270px", backgroundColor:"grey"}} onClick={() => deleteFromCart(item.item.id)}>
+                    <Button
+                      style={{ width: "270px", backgroundColor: "grey" }}
+                      onClick={() => deleteFromCart(item.item.id)}
+                    >
                       Remove from cart
                     </Button>
                   </>

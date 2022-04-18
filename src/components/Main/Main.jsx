@@ -2,15 +2,13 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import { Card } from "antd";
 import "./Main.css";
-import clothe from "./sources/clothe.png";
-import tours from "./sources/tours.png";
 import { Link } from "react-router-dom";
 
 const { Meta } = Card;
 
 const Main = () => {
   return (
-    <div className="main-page">
+    <div>
       <Navbar />
 
       <div className="main_title">

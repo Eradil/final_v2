@@ -17,8 +17,8 @@ import { favoriteContext } from "../../context/favoriteContext";
 import { useAuthContext } from "../../context/authContext";
 
 const Navbar = () => {
-  // const { cartLength } = useContext(cartContext);
-  // const { favoriteLength } = useContext(favoriteContext);
+  const { cartLength } = useContext(cartContext);
+  const { favoriteLength } = useContext(favoriteContext);
   const { user, checkAuth, logout } = useAuthContext();
   const location = useLocation();
   const navigate = useNavigate();
