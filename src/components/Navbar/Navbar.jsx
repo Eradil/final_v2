@@ -1,5 +1,6 @@
 import { Menu } from "antd";
 import {
+  HeartOutlined,
   HomeOutlined,
   LockOutlined,
   PhoneOutlined,
@@ -16,8 +17,8 @@ import { favoriteContext } from "../../context/favoriteContext";
 import { useAuthContext } from "../../context/authContext";
 
 const Navbar = () => {
-  // const { cartLength } = useContext(cartContext);
-  // const { favoriteLength } = useContext(favoriteContext);
+  const { cartLength } = useContext(cartContext);
+  const { favoriteLength } = useContext(favoriteContext);
   const { user, checkAuth, logout } = useAuthContext();
   const location = useLocation();
   const navigate = useNavigate();
@@ -110,6 +111,16 @@ const Navbar = () => {
             </Menu.Item>
           </Link>
 
+          <Link to={"/favorite"}>
+            {/* <Badge count={+cartLength}> */}
+            <Menu.Item
+              style={{ color: "black", listStyle: "none" }}
+              icon={<HeartOutlined />}
+            >
+              Favorite
+            </Menu.Item>
+            {/* </Badge> */}
+          </Link>
           <Link to={"/cart"}>
             {/* <Badge count={+cartLength}> */}
             <Menu.Item

@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import About from "./components/About/About";
 
 import AdminProduct from "./components/AdminProduct/AdminProduct";
+
 import Cart from "./components/Cart/Cart";
 import Details from "./components/Details/Details";
 import EditProduct from "./components/EditProduct/EditProduct";
@@ -84,17 +84,6 @@ const Routing = () => {
       element: <SignUp />,
       id: 11,
     },
-    {
-      link: "/about",
-      element: <About />,
-      id: 11,
-    },
-
-    // {
-    //   link: "/details/:id",
-    //   element: <Details />,
-    //   id: 3,
-    // },
   ];
   let ADMIN_ROUTE = [
     {
@@ -112,11 +101,11 @@ const Routing = () => {
   return (
     <div>
       <BrowserRouter>
-        {/* <Navbar /> */}
         <Routes>
           {PUBLIC_ROUTE.map((item) => (
             <Route key={item.id} path={item.link} element={item.element} />
           ))}
+
           {ADMIN_ROUTE.map((item) => (
             <Route key={item.id} path={item.link} element={item.element} />
           ))}
