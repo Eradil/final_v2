@@ -1,15 +1,38 @@
 import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
 import React, { useContext, useState } from "react";
 import { contextProducts } from "../../context/contextProducts";
+import { Upload, message } from "antd";
 import "./AddProduct.css";
+import { UploadOutlined } from "@ant-design/icons";
+
+const props = {
+  name: "file",
+  action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
+  headers: {
+    authorization: "authorization-text",
+  },
+  onChange(info) {
+    if (info.file.status !== "uploading") {
+      console.log(info.file, info.fileList);
+    }
+    if (info.file.status === "done") {
+      message.success(`${info.file.name} file uploaded successfully`);
+    } else if (info.file.status === "error") {
+      message.error(`${info.file.name} file upload failed.`);
+    }
+  },
+};
 
 const AddProduct = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const { createProduct } = useContext(contextProducts);
 
+  const { createProduct } = useContext(contextProducts);
+  const [img, setImg] = useState(null);
   function save(newProduct) {
+    console.log(newProduct);
     createProduct({
       ...newProduct,
+      images: img,
       // comment: [],
     });
     setIsModalVisible(false);
@@ -42,7 +65,7 @@ const AddProduct = () => {
         <Form layout="vertical" name="basic" onFinish={save}>
           <Form.Item
             label="Name"
-            name="name"
+            name="title"
             rules={[
               {
                 required: true,
@@ -54,7 +77,7 @@ const AddProduct = () => {
           </Form.Item>
 
           <Form.Item
-            name="description"
+            name="text"
             label="description"
             rules={[
               {
@@ -66,8 +89,8 @@ const AddProduct = () => {
             <Input.TextArea placeholder="description" />
           </Form.Item>
           <Form.Item
-            label="Made in"
-            name="made in"
+            label="status"
+            name="status"
             rules={[
               {
                 required: true,
@@ -91,7 +114,7 @@ const AddProduct = () => {
           </Form.Item>
           <Form.Item
             label="Category"
-            name="type"
+            name="category"
             rules={[
               {
                 required: true,
@@ -108,7 +131,7 @@ const AddProduct = () => {
           </Form.Item>
           <Form.Item
             label="Image"
-            name="image"
+            name="images"
             rules={[
               {
                 required: true,
@@ -116,7 +139,14 @@ const AddProduct = () => {
               },
             ]}
           >
-            <Input placeholder="URL of image" />
+            <Input
+              placeholder="URL of image"
+              onChange={(e) => setImg(e.target.files[0])}
+              type="file"
+            />
+            {/* <Upload {...props}>
+              <Button icon={<UploadOutlined />}>Click to Upload</Button>
+            </Upload> */}
           </Form.Item>
 
           <Form.Item>

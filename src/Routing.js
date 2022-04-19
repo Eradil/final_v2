@@ -133,7 +133,7 @@ const Routing = () => {
             <Route key={item.id} path={item.link} element={item.element} />
           ))}
 
-          {ADMIN_ROUTE.map((item) => (
+          {/* {ADMIN_ROUTE.map((item) => (
             <Route
               key={item.id}
               path={item.link}
@@ -145,6 +145,9 @@ const Routing = () => {
                 )
               }
             />
+          ))} */}
+          {ADMIN_ROUTE.map((item) => (
+            <Route key={item.id} path={item.link} element={item.element} />
           ))}
         </Routes>
         <Footer />

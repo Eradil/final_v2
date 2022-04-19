@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useReducer, useState } from "react";
-//
+
 export const contextProducts = React.createContext();
 //
 //
@@ -9,7 +9,7 @@ const CASE_GET_PRODUCTS = "CASE_GET_PRODUCTS";
 const CASE_GET_ONE_PRODUCT = "CASE_GET_ONE_PRODUCT";
 // cases end
 //
-let API = "http://localhost:8000/products";
+let API = "http://52.91.106.90/api/v1";
 //
 const INIT_STATE = {
   products: [],
@@ -24,8 +24,8 @@ const reducer = (state = INIT_STATE, action) => {
 
       return {
         ...state,
-        products: action.payload.data,
-        productsCount: action.payload.headers["x-total-count"],
+        products: action.payload.data.results,
+        productsCount: action.payload.data.count,
       };
     case CASE_GET_ONE_PRODUCT:
       return {
@@ -42,7 +42,8 @@ const ContextProductsProvider = ({ children }) => {
   const [loading, setLoading] = useState();
   async function getProducts() {
     setLoading(true);
-    let result = await axios(`${API}${window.location.search}`);
+
+    let result = await axios(`${API}/post/${window.location.search}`);
     console.log(result, "res");
     dispatch({
       type: CASE_GET_PRODUCTS,
@@ -52,23 +53,49 @@ const ContextProductsProvider = ({ children }) => {
   }
 
   async function createProduct(newProduct) {
-    await axios.post(API, newProduct);
+    let formData = new FormData();
+    formData.append("title", newProduct.title);
+    formData.append("text", newProduct.text);
+    formData.append("images", newProduct.images);
+    formData.append("status", newProduct.status);
+    formData.append("price", newProduct.price);
+    formData.append("category", newProduct.category);
+    console.log(formData);
+    await axios.post(API + "/post/", formData, {
+      headers: {
+        Authorization:
+          "Token " + JSON.parse(localStorage.getItem("token")).access,
+      },
+    });
     getProducts();
   }
   async function deleteProduct(id) {
-    await axios.delete(`${API}/${id}`);
+    await axios.delete(`${API}/post/${id}/`, {
+      headers: {
+        Authorization:
+          "Token " + JSON.parse(localStorage.getItem("token")).access,
+      },
+    });
     console.log(id);
     getProducts();
   }
   async function getOneProduct(id) {
-    let result = await axios(`${API}/${id}`);
+    let result = await axios(`${API}/post/${id}/`);
     dispatch({
       type: CASE_GET_ONE_PRODUCT,
       payload: result,
     });
   }
   async function editProduct(id, editedProduct) {
-    await axios.patch(`${API}/${id}`, editedProduct);
+    let formData = new FormData();
+    formData.append("title", editedProduct.title);
+    console.log(formData);
+    await axios.patch(`${API}/post/${id}/`, formData, {
+      headers: {
+        Authorization:
+          "Token " + JSON.parse(localStorage.getItem("token")).access,
+      },
+    });
     getProducts();
   }
 

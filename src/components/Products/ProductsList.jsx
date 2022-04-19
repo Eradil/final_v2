@@ -20,7 +20,7 @@ const ProductsList = () => {
   );
   const [limit, setLimit] = useState(5);
 
-  const [name, setName] = useState([]);
+  const [title, setTitle] = useState([]);
   const [price, setPrice] = useState([1, 1000000]);
   const location = useLocation();
 
@@ -30,11 +30,11 @@ const ProductsList = () => {
       _page: page,
       _limit: limit,
       q: searchValue,
-      name: name,
+      title: title,
       price_gte: price[0],
       price_lte: price[1],
     });
-  }, [page, limit, searchValue, price, name]);
+  }, [page, limit, searchValue, price, title]);
   useEffect(() => {
     getProducts();
   }, [searchParams]);
@@ -45,8 +45,8 @@ const ProductsList = () => {
       <Search
         searchValue={searchValue}
         setSearchValue={setSearchValue}
-        name={name}
-        setName={setName}
+        title={title}
+        setTitle={setTitle}
         price={price}
         setPrice={setPrice}
       />

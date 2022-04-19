@@ -24,13 +24,12 @@ const Favorite = () => {
                 <Card hoverable style={{ maxWidth: 400, margin: "10px 0" }}>
                   <img
                     className="imageCart"
-                    src={item.item.image}
+                    src={item.item.images}
                     alt="img"
                     style={{ width: "270px" }}
                   />
-                  <h3>{item.item.brand}</h3>
-                  <h4>{item.item.model}</h4>
-                  <div>{item.item.description}</div>
+                  <h3>{item.item.title}</h3>
+                  <div>{item.item.text}</div>
                   <Button onClick={() => deleteFromFavorite(item.item.id)}>
                     Remove from favorite
                   </Button>
