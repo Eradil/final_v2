@@ -53,6 +53,7 @@ const SignIn = () => {
             >
               Sign In
             </Button>
+            Don't have an account? <button onClick={() => navigate("/signup")}>Register</button>
           </Form.Item>
         </Form>
       </div>

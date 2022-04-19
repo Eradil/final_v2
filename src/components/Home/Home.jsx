@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 // import Footer from "../Footer/Footer"
 import React from "react";
 import Navbar from "../Navbar/Navbar";
+import Navbar2 from "../Navbar2/Navbar2";
 // import video from "./sources2/video.mp4";
 // import "./Home2.css";
 // import bigimg from "./sources2/bigimg.jpeg";
@@ -31,6 +32,7 @@ const Home = () => {
           <img id="bg" src={bg} alt="" style={{ height: "100%" }} />
           <div className="content-wrapper">
             <Navbar />
+            <Navbar2/>
             <div className="content-wrapper-2">
               <header className="header">
                 <div className="menu-icon header__item"></div>
