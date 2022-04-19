@@ -5,7 +5,6 @@ import { contextProducts } from "../../context/contextProducts";
 import "./EditProduct.css";
 
 const EditProduct = () => {
-  const [img, setImg] = useState();
   const { getOneProduct, editProduct, oneProduct } =
     useContext(contextProducts);
   const params = useParams();
@@ -87,9 +86,9 @@ const EditProduct = () => {
           >
             <Input
               placeholder="URL of image"
-              onChange={(e) => setImg(e.target.files[0])}
-              
-              type="file"
+              // onChange={(e) => setImg(e.target.files[0])}
+
+              // type="file"
             />
           </Form.Item>
 
