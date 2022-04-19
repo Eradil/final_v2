@@ -24,11 +24,6 @@ const EditProduct = () => {
     console.log(values);
     editProduct(params.id, values);
     navigate("/admin");
-    editProduct({
-      ...values,
-      images: img,
-      // comment: [],
-    });
   }
 
   return (

@@ -80,34 +80,6 @@ const Navbar = () => {
               icon={<ShoppingOutlined />}
             ></Menu.Item>
           </Link>
-          {user ? (
-            <h2>
-              User: {user}{" "}
-              <Menu.Item
-                style={{ color: "black", listStyle: "none" }}
-                icon={<UserOutlined />}
-                onClick={logout}
-              >
-                Logout
-              </Menu.Item>
-            </h2>
-          ) : location.pathname === "/signup" ? (
-            <Menu.Item
-              style={{ color: "black", listStyle: "none" }}
-              icon={<UserOutlined />}
-              onClick={() => navigate("/signin")}
-            >
-              Login
-            </Menu.Item>
-          ) : (
-            <Menu.Item
-              style={{ color: "black", listStyle: "none" }}
-              icon={<UserOutlined />}
-              onClick={() => navigate("/signup")}
-            >
-              Register
-            </Menu.Item>
-          )}
         </Menu>
       </div>
     </div>
