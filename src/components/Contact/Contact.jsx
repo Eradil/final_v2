@@ -2,6 +2,8 @@ import React from "react";
 import "boxicons";
 import "./Contact.css";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Navbar2 from "../Navbar2/Navbar2";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -14,6 +16,8 @@ const Contact = () => {
   }
   return (
     <div>
+      <Navbar />
+            <Navbar2/>
       <div>
         <section className="contact">
           <div className="content">

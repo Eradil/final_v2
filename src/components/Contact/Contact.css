@@ -105,7 +105,7 @@
 }
 
 .contactForm {
-  width: 80%;
+  width: 100%;
   padding: 40px;
   background: rgba(36, 35, 35, 0.856);
 }
@@ -180,6 +180,19 @@
   box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
   color: white;
   transform: translateY(-7px);
+}
+
+.contactInfo{
+  display: flex;
+  justify-content: space-around;
+}
+
+.text{
+  text-align: center;
+}
+
+.icon{
+  text-align: center;
 }
 
 @media (max-width: 991px) {

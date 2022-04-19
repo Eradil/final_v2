@@ -12,7 +12,7 @@ const Footer = () => {
           </h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
-            atque recusansdgsddae in sit sunt molestiae aliquid fugit. Mollitia eaque
+            atque recuasdsansdgsddae in sit sunt molestiae aliquid fugit. Mollitia eaque
             tempore iure sit nobis? Vitae nexamo, optifdsfsdfo maiores numquam quisddd
             recusandae.
           </p>
