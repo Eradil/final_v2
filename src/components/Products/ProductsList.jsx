@@ -18,7 +18,7 @@ const ProductsList = () => {
   const [searchValue, setSearchValue] = useState(
     searchParams.get("q") ? searchParams.get("q") : ""
   );
-  const [limit, setLimit] = useState(5);
+  const [limit, setLimit] = useState(10);
 
   const [title, setTitle] = useState([]);
   const [price, setPrice] = useState([1, 1000000]);
@@ -26,7 +26,7 @@ const ProductsList = () => {
 
   useEffect(() => {
     setSearchParams({
-      type: location.pathname.slice(1, location.pathname.length),
+      category: location.pathname.slice(1, location.pathname.length),
       _page: page,
       _limit: limit,
       q: searchValue,

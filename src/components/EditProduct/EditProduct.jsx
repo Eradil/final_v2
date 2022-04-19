@@ -91,6 +91,23 @@ const EditProduct = () => {
               // type="file"
             />
           </Form.Item>
+          <Form.Item
+            label="Category"
+            name="category"
+            rules={[
+              {
+                required: true,
+                message: "Please input details!",
+              },
+            ]}
+          >
+            <Select>
+              <Select.Option value={"clothes"}>Clothes</Select.Option>
+              <Select.Option value={"music"}>Music</Select.Option>
+              <Select.Option value={"interior"}>Interior</Select.Option>\{" "}
+              <Select.Option value={"tours"}>Tours</Select.Option>
+            </Select>
+          </Form.Item>
 
           <Form.Item>
             <Button htmlType="submit">Save product</Button>
