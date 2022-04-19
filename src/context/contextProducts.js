@@ -87,8 +87,14 @@ const ContextProductsProvider = ({ children }) => {
     });
   }
   async function editProduct(id, editedProduct) {
+    console.log(editedProduct);
     let formData = new FormData();
     formData.append("title", editedProduct.title);
+    formData.append("price", editedProduct.price);
+    formData.append("text", editedProduct.text);
+    formData.append("status", editedProduct.status);
+    formData.append("category", editedProduct.category);
+    formData.append("images", editedProduct.image);
     console.log(formData);
     await axios.patch(`${API}/post/${id}/`, formData, {
       headers: {

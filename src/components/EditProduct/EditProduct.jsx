@@ -1,10 +1,11 @@
 import { Button, Form, Input, InputNumber, Select } from "antd";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { contextProducts } from "../../context/contextProducts";
 import "./EditProduct.css";
 
 const EditProduct = () => {
+  const [img, setImg] = useState();
   const { getOneProduct, editProduct, oneProduct } =
     useContext(contextProducts);
   const params = useParams();
@@ -23,6 +24,11 @@ const EditProduct = () => {
     console.log(values);
     editProduct(params.id, values);
     navigate("/admin");
+    editProduct({
+      ...values,
+      images: img,
+      // comment: [],
+    });
   }
 
   return (
@@ -57,8 +63,8 @@ const EditProduct = () => {
           </Form.Item>
           <Form.Item label="status" name="status">
             <Select>
-              <Select.Option>in stock</Select.Option>
-              <Select.Option>out of stock</Select.Option>
+              <Select.Option value="In stock">in stock</Select.Option>
+              <Select.Option value="out of stock">out of stock</Select.Option>
             </Select>
           </Form.Item>
           <Form.Item
@@ -73,18 +79,7 @@ const EditProduct = () => {
           >
             <InputNumber min={1} style={{ width: "100%" }} />
           </Form.Item>
-          {/* <Form.Item
-            label="Details"
-            name="details"
-            rules={[
-              {
-                required: true,
-                message: "Please input details!",
-              },
-            ]}
-          >
-            <Input placeholder="details" />
-          </Form.Item> */}
+
           <Form.Item
             label="Image"
             name="images"
@@ -95,12 +90,12 @@ const EditProduct = () => {
               },
             ]}
           >
-            {/* <Input
+            <Input
               placeholder="URL of image"
               onChange={(e) => setImg(e.target.files[0])}
+              
               type="file"
-            /> */}
-            <Input placeholder="URL of image" />
+            />
           </Form.Item>
 
           <Form.Item>
