@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Activate from "./components/Activate/Activate";
 
 import AdminProduct from "./components/AdminProduct/AdminProduct";
@@ -21,7 +21,7 @@ import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 import Visa from "./components/Visa/Visa";
 import { authContext } from "./context/authContext";
-const ADMIN_EMAIL = "abasoveradil@gmail.com";
+// const ADMIN_EMAIL = "abasoveradil@gmail.com";
 
 const Routing = () => {
   let PUBLIC_ROUTE = [

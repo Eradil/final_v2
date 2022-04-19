@@ -1,7 +1,7 @@
 import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
 import React, { useContext, useState } from "react";
 import { contextProducts } from "../../context/contextProducts";
-import { Upload, message } from "antd";
+import { message } from "antd";
 import "./AddProduct.css";
 import { UploadOutlined } from "@ant-design/icons";
 
@@ -123,8 +123,8 @@ const AddProduct = () => {
             ]}
           >
             <Select>
-              <Select.Option value={"music"}>Music</Select.Option>
               <Select.Option value={"clothes"}>Clothes</Select.Option>
+              <Select.Option value={"music"}>Music</Select.Option>
               <Select.Option value={"interior"}>Interior</Select.Option>\{" "}
               <Select.Option value={"tours"}>Tours</Select.Option>
             </Select>
