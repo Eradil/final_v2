@@ -4,7 +4,7 @@ import axios from "axios";
 export const authContext = React.createContext();
 export const useAuthContext = () => useContext(authContext);
 
-const API = "";
+const API = "http://52.91.106.90/api/v1/";
 
 const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState("");
@@ -14,10 +14,13 @@ const AuthContextProvider = ({ children }) => {
   //
   const signUp = async (user, navigate) => {
     let formData = new FormData();
-    formData.append("username", user.email);
+    formData.append("email", user.email);
     formData.append("password", user.password);
+    formData.append("password_confirm", user.confirmPassword);
+    formData.append("name", user.name);
+    formData.append("last_name", user.lastName);
     try {
-      const res = await axios.post(`${API}register/`, formData);
+      const res = await axios.post(`${API}accounts/register/`, formData);
       console.log(res);
       navigate("/signin");
       // setUser(user.email)
@@ -26,18 +29,29 @@ const AuthContextProvider = ({ children }) => {
       setError("Error!");
     }
   };
-  async function signIn(username, password, navigate) {
-    console.log(username, password);
+  async function activateAcc(email, activation_code) {
     let formData = new FormData();
-    formData.append("username", username);
+    formData.append("email", email);
+    formData.append("activation_code", activation_code);
+    try {
+      let res = await axios.post(`${API}accounts/activate/`, formData);
+      console.log(res);
+    } catch {
+      setError("Error!");
+    }
+  }
+  async function signIn(email, password, navigate) {
+    console.log(email, password);
+    let formData = new FormData();
+    formData.append("email", email);
     formData.append("password", password);
     try {
-      let res = await axios.post(`${API}api/token/`, formData);
+      let res = await axios.post(`${API}accounts/login/`, formData);
       navigate("/");
       console.log(res);
       localStorage.setItem("token", JSON.stringify(res.data));
-      localStorage.setItem("username", username);
-      setUser(username);
+      localStorage.setItem("email", email);
+      setUser(email);
     } catch (e) {
       setError("Error!");
     }
@@ -48,7 +62,7 @@ const AuthContextProvider = ({ children }) => {
     try {
       const Authorization = `Bearer ${token.access}`;
       let res = await axios.post(
-        `${API}api/token/refresh/`,
+        `${API}accounts/token/refresh/`,
         { refresh: token.refresh },
         { headers: { Authorization } }
       );
@@ -56,8 +70,8 @@ const AuthContextProvider = ({ children }) => {
         "token",
         JSON.stringify({ refresh: token.refresh, access: res.data.access })
       );
-      let username = localStorage.getItem("username");
-      setUser(username);
+      let email = localStorage.getItem("email");
+      setUser(email);
       console.log(res);
     } catch (e) {
       logout();
@@ -67,12 +81,21 @@ const AuthContextProvider = ({ children }) => {
   }
   function logout() {
     localStorage.removeItem("token");
-    localStorage.removeItem("username");
+    localStorage.removeItem("email");
     setUser("");
   }
   return (
     <authContext.Provider
-      value={{ signUp, signIn, user, error, checkAuth, logout, loading }}
+      value={{
+        signUp,
+        signIn,
+        user,
+        error,
+        checkAuth,
+        logout,
+        loading,
+        activateAcc,
+      }}
     >
       {children}
     </authContext.Provider>

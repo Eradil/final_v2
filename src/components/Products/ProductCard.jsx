@@ -1,5 +1,4 @@
 import {
-  AudioOutlined,
   EllipsisOutlined,
   HeartOutlined,
   ShoppingCartOutlined,
@@ -55,8 +54,6 @@ const ProductCard = ({ item }) => {
               setCheckItem(checkItemInCart(item.id));
             }}
           />
-
-          <AudioOutlined className="product_card_icon1" />
         </div>
       </Card>
     </div>
