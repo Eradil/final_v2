@@ -4,8 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AdminProduct from "./components/AdminProduct/AdminProduct";
 
 import Cart from "./components/Cart/Cart";
-import Commentss from "./components/Commentss/Commentss";
-// import Contact from "./components/Contact/Contact";
+import Contact from "./components/Contact/Contact";
 import Details from "./components/Details/Details";
 import EditProduct from "./components/EditProduct/EditProduct";
 import Favorite from "./components/Favorite/Favorite";
@@ -94,16 +93,10 @@ const Routing = () => {
       id: 11,
     },
     {
-      link: "/comments",
-      element: <Commentss />,
-      id: 111,
+      link: "/contacts",
+      element: <Contact />,
+      id: 11,
     },
-
-    // {
-    //   link: "/details/:id",
-    //   element: <Details />,
-    //   id: 3,
-    // },
   ];
   let ADMIN_ROUTE = [
     {

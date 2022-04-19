@@ -17,14 +17,14 @@ const Cart = () => {
     <>
 
       <Navbar />
-      <div style={{}} className="cart-cart container products-total">
+      <div style={{}} className="products-total1">
         <List
           itemLayout="horizontal"
           dataSource={cart.products}
           footer={
             <div>
               <h1>Total: {cart.totalPrice}$</h1>
-              <Button id="btn-order" onClick={() => navigate("/visa")}>
+              <Button id="btn-order1" onClick={() => navigate("/visa")}>
                 Order
               </Button>
             </div>
@@ -47,13 +47,12 @@ const Cart = () => {
                   <>
                     <div className="cart-imgdes">
                       <img
-                        className="imageCart"
+                        className="imageCart1"
                         src={item.item.image}
                         alt="img"
-                        style={{ width: "270px" }}
                       />
                       <div className="cart-description">
-                        <div className="aaa">{item.item.description}</div>
+                        {/* <div className="aaa">{item.item.description}</div> */}
                         <div className="cart-sub-price">
                           <h4>SubPrice</h4>
                           <h3>{"$" + item.subPrice}</h3>

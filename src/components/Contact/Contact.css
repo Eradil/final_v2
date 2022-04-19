@@ -34,6 +34,12 @@
   max-width: 800px;
   text-align: center;
 }
+.container-cnt {
+  padding: 20px;
+  width: 700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
 
 .contact .content h2 {
   font-size: 36px;
@@ -99,15 +105,15 @@
 }
 
 .contactForm {
-  width: 40%;
+  width: 80%;
   padding: 40px;
   background: rgba(36, 35, 35, 0.856);
 }
 
 .contactForm h2 {
   font-style: 30px;
-  color: #333;
-  font-weight: 500;
+  /* color: #333; */
+  font-weight: 800;
 }
 
 .contactForm h2.inputBox {

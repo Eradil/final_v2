@@ -89,20 +89,20 @@ const Commentss = () => {
           </div>
           <div className="col-6">
             <form>
-              <div className="form-group">
+              <div className="form-group1">
                 <label htmlFor="comment-name">Name:</label> <br />
                 <input
                   type="name"
-                  className="form-control"
+                  className="form-control1"
                   id="comment-name"
                   placeholder="Your name"
                 />
               </div>
-              <div className="form-group">
+              <div className="form-group1">
                 <label htmlFor="comment-body">Comment:</label> <br />
                 <input
                   type="name"
-                  className="form-control"
+                  className="form-control1"
                   id="comment-body"
                   placeholder="Your comment"
                 />
@@ -111,7 +111,7 @@ const Commentss = () => {
                 <button
                   type="submit"
                   id="comment-add"
-                  className="btn"
+                  className="btn1"
                   onClick={(e) => addComment(e)}
                 >
                   Submit
