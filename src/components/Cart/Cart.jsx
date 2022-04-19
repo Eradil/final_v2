@@ -35,7 +35,7 @@ const Cart = () => {
                 title={
                   <div>
                     <div>
-                      <h2>{item.item.model}</h2>
+                      <h2>{item.item.text}</h2>
                     </div>
 
                     <div>
@@ -47,12 +47,12 @@ const Cart = () => {
                   <>
                     <div className="cart-imgdes">
                       <img
-                        className="imageCart1"
-                        src={item.item.image}
+                        className="imageCart"
+                        src={item.item.images}
                         alt="img"
                       />
                       <div className="cart-description">
-                        {/* <div className="aaa">{item.item.description}</div> */}
+                        <div className="aaa">{item.item.text}</div>
                         <div className="cart-sub-price">
                           <h4>SubPrice</h4>
                           <h3>{"$" + item.subPrice}</h3>

@@ -1,4 +1,4 @@
-import { Button, Form, Input, InputNumber } from "antd";
+import { Button, Form, Input, InputNumber, Select } from "antd";
 import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { contextProducts } from "../../context/contextProducts";
@@ -32,7 +32,7 @@ const EditProduct = () => {
         <Form form={form} layout="vertical" name="basic" onFinish={save}>
           <Form.Item
             label="Name"
-            name="name"
+            name="title"
             rules={[
               {
                 required: true,
@@ -44,7 +44,7 @@ const EditProduct = () => {
           </Form.Item>
 
           <Form.Item
-            name="description"
+            name="text"
             label="description"
             rules={[
               {
@@ -55,17 +55,11 @@ const EditProduct = () => {
           >
             <Input.TextArea placeholder="description" />
           </Form.Item>
-          <Form.Item
-            label="Produced"
-            name="produced"
-            rules={[
-              {
-                required: true,
-                message: "Please input produced!",
-              },
-            ]}
-          >
-            <Input placeholder="produced" />
+          <Form.Item label="status" name="status">
+            <Select>
+              <Select.Option>in stock</Select.Option>
+              <Select.Option>out of stock</Select.Option>
+            </Select>
           </Form.Item>
           <Form.Item
             label="Price"
@@ -79,7 +73,7 @@ const EditProduct = () => {
           >
             <InputNumber min={1} style={{ width: "100%" }} />
           </Form.Item>
-          <Form.Item
+          {/* <Form.Item
             label="Details"
             name="details"
             rules={[
@@ -90,10 +84,10 @@ const EditProduct = () => {
             ]}
           >
             <Input placeholder="details" />
-          </Form.Item>
+          </Form.Item> */}
           <Form.Item
             label="Image"
-            name="image"
+            name="images"
             rules={[
               {
                 required: true,
@@ -101,6 +95,11 @@ const EditProduct = () => {
               },
             ]}
           >
+            {/* <Input
+              placeholder="URL of image"
+              onChange={(e) => setImg(e.target.files[0])}
+              type="file"
+            /> */}
             <Input placeholder="URL of image" />
           </Form.Item>
 

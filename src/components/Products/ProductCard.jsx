@@ -26,10 +26,10 @@ const ProductCard = ({ item }) => {
         className="product_card"
         hoverable
         cover={
-          <img className="product_card_img" alt="example" src={item.image} />
+          <img className="product_card_img" alt="example" src={item.images} />
         }
       >
-        <Meta title={item.name} description={item.produced} />
+        <Meta title={item.title} description={item.text} />
         <p>{item.price}com</p>
 
         <div className="card_icons1">

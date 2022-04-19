@@ -1,7 +1,5 @@
 import { Input } from "antd";
 import React, { useState } from "react";
-// import { useSearchParams } from "react-router-dom";
-// import { contextProducts } from "../../context/contextProducts";
 import Filters from "../Filters/Filters";
 
 const Search = ({
@@ -9,28 +7,11 @@ const Search = ({
   setSearchValue,
   price,
   setPrice,
-  name,
-  setName,
+  title,
+  setTitle,
 }) => {
-  // const { getProducts } = useContext(contextProducts);
-  // const [searchParams, setSearchParams] = useSearchParams();
   const [showFilters, setShowFilters] = useState(false);
 
-  // useEffect(() => {
-  //   getProducts();
-  // }, []);
-
-  // useEffect(() => {
-  //   setSearchParams({
-  //     q: searchValue,
-  //     name: name,
-  //     price_gte: price[0],
-  //     price_lte: price[1],
-  //   });
-  // }, [searchValue, name, price]);
-  // useEffect(() => {
-  //   getProducts();
-  // }, [searchParams]);
   return (
     <div>
       <div className="search_filters">
@@ -50,8 +31,8 @@ const Search = ({
 
           {showFilters ? (
             <Filters
-              name={name}
-              setName={setName}
+              title={title}
+              setTitle={setTitle}
               price={price}
               setPrice={setPrice}
               className="filters"

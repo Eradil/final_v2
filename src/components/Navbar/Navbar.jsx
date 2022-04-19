@@ -8,16 +8,13 @@ import React, { useEffect } from "react";
 import "./Navbar.css";
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { cartContext } from "../../context/cartContext";
-// import { favoriteContext } from "../../context/favoriteContext";
 import { useAuthContext } from "../../context/authContext";
 
 const Navbar = () => {
-  // const { cartLength } = useContext(cartContext);
-  // const { favoriteLength } = useContext(favoriteContext);
   const { user, checkAuth, logout } = useAuthContext();
   const location = useLocation();
   const navigate = useNavigate();
+  const ADMIN_EMAIL = "main@user.com";
   useEffect(() => {
     if (localStorage.getItem("token")) {
       checkAuth();
@@ -61,6 +58,10 @@ const Navbar = () => {
               Contacts
             </Menu.Item>
           </Link>
+
+          {/* {user === ADMIN_EMAIL ? (
+           
+          ): null} */}
           <Link to={"/admin"}>
             <Menu.Item style={{ color: "black", listStyle: "none" }}>
               Admin
@@ -68,22 +69,18 @@ const Navbar = () => {
           </Link>
 
           <Link to={"/favorite"}>
-            {/* <Badge count={+cartLength}> */}
             <Menu.Item
               style={{ color: "black", listStyle: "none" }}
               icon={<HeartOutlined />}
             ></Menu.Item>
-            {/* </Badge> */}
           </Link>
           <Link to={"/cart"}>
-            {/* <Badge count={+cartLength}> */}
             <Menu.Item
               style={{ color: "black", listStyle: "none" }}
               icon={<ShoppingOutlined />}
             ></Menu.Item>
-            {/* </Badge> */}
           </Link>
-          {/* {user ? (
+          {user ? (
             <h2>
               User: {user}{" "}
               <Menu.Item
@@ -110,7 +107,7 @@ const Navbar = () => {
             >
               Register
             </Menu.Item>
-          )} */}
+          )}
         </Menu>
       </div>
     </div>

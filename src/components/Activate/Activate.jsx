@@ -47,7 +47,7 @@ const Activate = () => {
               value={activate}
             />
           </Form.Item>
-          <Link to="/">
+          <Link to="/signin">
             <Button
               variant="contained"
               className="signin-btn"

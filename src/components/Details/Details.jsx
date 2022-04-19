@@ -17,15 +17,21 @@ const Details = () => {
   return (
     <>
       <Navbar />
-      <div className="details_main">
-        <div className="container">
-          <div className="details">
-            <div className="details_left">
-              <img
-                className="details_img"
-                src={oneProduct.image}
-                alt="product"
-              />
+      <div className="container">
+        <div className="details">
+          <div className="details_left">
+            <img
+              className="details_img"
+              src={oneProduct.images}
+              alt="product"
+            />
+          </div>
+          <div className="details_info">
+            <div className="info_inner">
+              <h2 className="info_title">{oneProduct.title}</h2>
+              <h3 className="info_descr">{oneProduct.text}</h3>
+              <p className="info_details">{oneProduct.price}</p>
+              {/* <p className="info_details2">{oneProduct.details}</p> */}
             </div>
             <div className="details_info">
               <div className="info_inner">
