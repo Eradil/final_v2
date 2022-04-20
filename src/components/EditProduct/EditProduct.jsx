@@ -2,8 +2,6 @@ import { Button, Form, Input, InputNumber, Select } from "antd";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { contextProducts } from "../../context/contextProducts";
-import Navbar from "../Navbar/Navbar";
-import Navbar2 from "../Navbar2/Navbar2";
 import "./EditProduct.css";
 
 const EditProduct = () => {
@@ -27,68 +25,56 @@ const EditProduct = () => {
     navigate("/admin");
   }
 
-  console.log(oneProduct);
-
   return (
-    <div>
-      <Navbar />
-      <Navbar2 />
-      <div className="edit_products">
-        <h2 className="edit_title">You can make adjustments</h2>
-        <div className="edit_box">
-          <Form form={form} layout="vertical" name="basic" onFinish={save}>
-            <Form.Item
-              label="Name"
-              name="title"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input name!",
-                },
-              ]}
-            >
-              <Input placeholder="name of instrument" />
-            </Form.Item>
+    <div className="edit_products">
+      <h2 className="edit_title">You can make adjustments</h2>
+      <div className="edit_box">
+        <Form form={form} layout="vertical" name="basic" onFinish={save}>
+          <Form.Item
+            label="Name"
+            name="title"
+            rules={[
+              {
+                required: true,
+                message: "Please input name!",
+              },
+            ]}
+          >
+            <Input placeholder="name of instrument" />
+          </Form.Item>
 
-            <Form.Item
-              name="text"
-              label="description"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input description!",
-                },
-              ]}
-            >
-              <Input.TextArea placeholder="description" />
-            </Form.Item>
-            <Form.Item label="status" name="status">
-              <Select>
-                <Select.Option value="In stock">in stock</Select.Option>
-                <Select.Option value="out of stock">out of stock</Select.Option>
-              </Select>
-            </Form.Item>
-            <Form.Item
-              label="Price"
-              name="price"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input price!",
-                },
-              ]}
-            >
-              <InputNumber min={1} style={{ width: "100%" }} />
-            </Form.Item>
+          <Form.Item
+            name="text"
+            label="description"
+            rules={[
+              {
+                required: true,
+                message: "Please input description!",
+              },
+            ]}
+          >
+            <Input.TextArea placeholder="description" />
+          </Form.Item>
+          <Form.Item label="status" name="status">
+            <Select>
+              <Select.Option value="In stock">in stock</Select.Option>
+              <Select.Option value="out of stock">out of stock</Select.Option>
+            </Select>
+          </Form.Item>
+          <Form.Item
+            label="Price"
+            name="price"
+            rules={[
+              {
+                required: true,
+                message: "Please input price!",
+              },
+            ]}
+          >
+            <InputNumber min={1} style={{ width: "100%" }} />
+          </Form.Item>
 
-            {/* <Select style={{ width: "100%" }}>
-              <Select.Option value={"clothes"}>Clothes</Select.Option>
-              <Select.Option value={"music"}>Music</Select.Option>
-              <Select.Option value={"interior"}>Interior</Select.Option>\{" "}
-              <Select.Option value={"tours"}>Tours</Select.Option>
-            </Select> */}
-
-            {/* <Form.Item
+          <Form.Item
             label="Image"
             name="images"
             rules={[
@@ -100,18 +86,33 @@ const EditProduct = () => {
           >
             <Input
               placeholder="URL of image"
-              name=""
               // onChange={(e) => setImg(e.target.files[0])}
 
               // type="file"
             />
-          </Form.Item> */}
+          </Form.Item>
+          <Form.Item
+            label="Category"
+            name="category"
+            rules={[
+              {
+                required: true,
+                message: "Please input details!",
+              },
+            ]}
+          >
+            <Select>
+              <Select.Option value={"clothes"}>Clothes</Select.Option>
+              <Select.Option value={"music"}>Music</Select.Option>
+              <Select.Option value={"interior"}>Interior</Select.Option>\{" "}
+              <Select.Option value={"tours"}>Tours</Select.Option>
+            </Select>
+          </Form.Item>
 
-            <Form.Item>
-              <Button htmlType="submit">Save product</Button>
-            </Form.Item>
-          </Form>
-        </div>
+          <Form.Item>
+            <Button htmlType="submit">Save product</Button>
+          </Form.Item>
+        </Form>
       </div>
     </div>
   );

@@ -43,7 +43,7 @@ const ContextProductsProvider = ({ children }) => {
   async function getProducts() {
     setLoading(true);
 
-    let result = await axios(`${API}/post/${window.location.search}`);
+    let result = await axios(`${API}/post/` + window.location.search);
     console.log(result, "res");
     dispatch({
       type: CASE_GET_PRODUCTS,
@@ -94,7 +94,6 @@ const ContextProductsProvider = ({ children }) => {
     formData.append("text", editedProduct.text);
     formData.append("status", editedProduct.status);
     formData.append("category", editedProduct.category);
-    formData.append("images", editedProduct.image);
     console.log(formData);
     await axios.patch(`${API}/post/${id}/`, formData, {
       headers: {
