@@ -34,7 +34,7 @@ const ProductCard = ({ item }) => {
         }
       >
         <Meta title={item.title} description={item.text} />
-        <p>{item.price}com</p>
+        <p>{item.price}$</p>
 
         <div className="card_icons1">
           <Rate allowHalf defaultValue={2.5} />

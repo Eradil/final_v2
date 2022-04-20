@@ -13,12 +13,12 @@ const ProductsList = () => {
   const { getProducts, products, productsCount } = useContext(contextProducts);
 
   const [page, setPage] = useState(
-    searchParams.get("_page") ? searchParams.get("_page") : 1
+    searchParams.get("page") ? searchParams.get("page") : 1
   );
   const [searchValue, setSearchValue] = useState(
-    searchParams.get("q") ? searchParams.get("q") : ""
+    searchParams.get("title") ? searchParams.get("title") : ""
   );
-  const [limit, setLimit] = useState(10);
+  // const [limit, setLimit] = useState(5);
 
   const [title, setTitle] = useState([]);
   const [price, setPrice] = useState([1, 1000000]);
@@ -27,14 +27,14 @@ const ProductsList = () => {
   useEffect(() => {
     setSearchParams({
       category: location.pathname.slice(1, location.pathname.length),
-      _page: page,
-      _limit: limit,
-      q: searchValue,
+      page: page,
+      // limit: limit,
+      search: searchValue,
       title: title,
       price_gte: price[0],
       price_lte: price[1],
     });
-  }, [page, limit, searchValue, price, title]);
+  }, [page, searchValue, price, title]);
   useEffect(() => {
     getProducts();
   }, [searchParams]);
@@ -62,11 +62,11 @@ const ProductsList = () => {
           <Pagination
             total={+productsCount}
             current={+page}
-            pageSize={+limit}
+            pageSize={5}
             defaultCurrent={1}
-            onChange={(page, limit) => {
-              setPage(page);
-              setLimit(limit);
+            onChange={(page_size) => {
+              setPage(page_size);
+              // setLimit(limit);
             }}
           />
         </div>

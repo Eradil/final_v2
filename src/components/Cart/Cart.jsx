@@ -16,14 +16,14 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-      <div style={{}} className="cart-cart container products-total">
+      <div style={{}} className="products-total1">
         <List
           itemLayout="horizontal"
           dataSource={cart.products}
           footer={
             <div>
               <h1>Total: {cart.totalPrice}$</h1>
-              <Button id="btn-order" onClick={() => navigate("/visa")}>
+              <Button id="btn-order1" onClick={() => navigate("/visa")}>
                 Order
               </Button>
             </div>
@@ -34,7 +34,7 @@ const Cart = () => {
                 title={
                   <div>
                     <div>
-                      <h2>{item.item.text}</h2>
+                      <h2>{item.item.title}</h2>
                     </div>
 
                     <div>
@@ -47,12 +47,11 @@ const Cart = () => {
                     <div className="cart-imgdes">
                       <img
                         className="imageCart"
-                        src={item.item.images}
+                        src={"http://52.91.106.90" + item.item.image}
                         alt="img"
-                        style={{ width: "270px" }}
                       />
                       <div className="cart-description">
-                        <div className="aaa">{item.item.text}</div>
+                        <div className="aaa">{item.item.title}</div>
                         <div className="cart-sub-price">
                           <h4>SubPrice</h4>
                           <h3>{"$" + item.subPrice}</h3>
@@ -79,7 +78,7 @@ const Cart = () => {
                     </div>
                     <div></div>
                     <Button
-                      style={{ width: "270px", backgroundColor: "grey" }}
+                      style={{ width: "25vw", backgroundColor: "grey" }}
                       onClick={() => deleteFromCart(item.item.id)}
                     >
                       Remove from cart

@@ -40,9 +40,9 @@ const reducer = (state = INIT_STATE, action) => {
 const ContextProductsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
   const [loading, setLoading] = useState();
+
   async function getProducts() {
     setLoading(true);
-
     let result = await axios(`${API}/post/` + window.location.search);
     console.log(result, "res");
     dispatch({
@@ -50,6 +50,7 @@ const ContextProductsProvider = ({ children }) => {
       payload: result,
     });
     setLoading(false);
+    console.log(result);
   }
 
   async function createProduct(newProduct) {
