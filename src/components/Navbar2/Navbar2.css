@@ -3,3 +3,9 @@
     justify-content: end;
     margin-top: 15px;
 }
+
+.nav2-btn{
+    width: 60px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}

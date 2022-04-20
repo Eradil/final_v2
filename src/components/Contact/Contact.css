@@ -10,11 +10,16 @@
   position: relative;
   min-height: 100vh;
   padding: 50px 100px;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   background: linear-gradient(to right, #58e6f0, #f05858);
   background-size: 400% 400%;
+  animation: anime-back 10s infinite ease-in-out;
+}
+
+.bg-for-contacts{
+  background: linear-gradient(to right, #58e6f0, #f05858);
   animation: anime-back 10s infinite ease-in-out;
 }
 
@@ -194,6 +199,8 @@
 .icon{
   text-align: center;
 }
+
+
 
 @media (max-width: 991px) {
   .contact {

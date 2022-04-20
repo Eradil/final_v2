@@ -2,7 +2,6 @@ import { Button } from "antd";
 import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { contextProducts } from "../../context/contextProducts";
-import Commentss from "../Commentss/Commentss";
 import Navbar from "../Navbar/Navbar";
 import "./Details.css";
 
@@ -46,7 +45,6 @@ const Details = () => {
           </div>
         </div>
         <div className="details-comments">
-          <Commentss />
         </div>
       </div>
     </>
