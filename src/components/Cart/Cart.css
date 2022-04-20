@@ -1,4 +1,3 @@
-
 .cart-imgdes {
   display: flex;
 }
@@ -12,6 +11,10 @@
 
 .imageCart1 {
   height: 200px;
+}
+.imageCart {
+  width: 50vw;
+  height: auto;
 }
 
 #btn-order1 {
@@ -40,12 +43,12 @@
   }
 }
 
-.products-in-cart{
+.products-in-cart {
   display: flex;
   /* width: 40%; */
 }
 
-.products-total1{
+.products-total1 {
   display: flex;
   width: 70%;
   justify-content: center;

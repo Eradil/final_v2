@@ -24,7 +24,7 @@ const Favorite = () => {
                 <Card hoverable style={{ maxWidth: 400, margin: "10px 0" }}>
                   <img
                     className="imageCart"
-                    src={item.item.images}
+                    src={"http://52.91.106.90" + item.item.image}
                     alt="img"
                     style={{ width: "270px" }}
                   />
