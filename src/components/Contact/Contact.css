@@ -10,11 +10,16 @@
   position: relative;
   min-height: 100vh;
   padding: 50px 100px;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   background: linear-gradient(to right, #58e6f0, #f05858);
   background-size: 400% 400%;
+  animation: anime-back 10s infinite ease-in-out;
+}
+
+.bg-for-contacts{
+  background: linear-gradient(to right, #58e6f0, #f05858);
   animation: anime-back 10s infinite ease-in-out;
 }
 
@@ -105,7 +110,7 @@
 }
 
 .contactForm {
-  width: 80%;
+  width: 100%;
   padding: 40px;
   background: rgba(36, 35, 35, 0.856);
 }
@@ -175,13 +180,27 @@
   transition: 0.3s;
   margin: right 100px;
 }
-
 .floating-button:hover {
   background: #2ee59d;
   box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
   color: white;
   transform: translateY(-7px);
 }
+
+.contactInfo{
+  display: flex;
+  justify-content: space-around;
+}
+
+.text{
+  text-align: center;
+}
+
+.icon{
+  text-align: center;
+}
+
+
 
 @media (max-width: 991px) {
   .contact {

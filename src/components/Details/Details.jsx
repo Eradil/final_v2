@@ -14,7 +14,7 @@ const Details = () => {
   console.log(oneProduct);
 
   return (
-    <div className="details_main">
+    <>
       <Navbar />
       <div className="container">
         <div className="details">
@@ -31,12 +31,22 @@ const Details = () => {
               <h3 className="info_descr">{oneProduct.text}</h3>
               <p className="info_details">{oneProduct.price + "$"}</p>
             </div>
+            <div className="details_info">
+              <div className="info_inner">
+                <h2 className="info_title">{oneProduct.name}</h2>
+                <h3 className="info_descr">{oneProduct.description}</h3>
+                <p className="info_details">{oneProduct.produced}</p>
+                <p className="info_details2">{oneProduct.details}</p>
+              </div>
 
-            <Button style={{ width: "100%" }}>Add to cart</Button>
+              <Button style={{ width: "100%" }}>Add to cart</Button>
+            </div>
           </div>
         </div>
+        <div className="details-comments">
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

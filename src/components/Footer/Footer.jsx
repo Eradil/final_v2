@@ -12,8 +12,8 @@ const Footer = () => {
           </h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
-            atque recusandae in sit sunt molestiae aliquid fugit. Mollitia eaque
-            tempore iure sit nobis? Vitae nemo, optio maiores numquam quis
+            atque recuasdsansdgsddae in sit sunt molestiae aliquid fugit. Mollitia eaque
+            tempore iuwwre sit nobis? Vitae nexamo, optifdsfsdfo maiores numquam quisddd
             recusandae.
           </p>
         </div>

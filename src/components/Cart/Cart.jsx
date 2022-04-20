@@ -15,6 +15,7 @@ const Cart = () => {
   // console.log(cart);
   return (
     <>
+
       <Navbar />
       <div style={{}} className="products-total1">
         <List
@@ -95,3 +96,8 @@ const Cart = () => {
 };
 
 export default Cart;
+
+
+
+
+

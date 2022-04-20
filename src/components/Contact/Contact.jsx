@@ -2,6 +2,8 @@ import React from "react";
 import "boxicons";
 import "./Contact.css";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import Navbar2 from "../Navbar2/Navbar2";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -13,9 +15,14 @@ const Contact = () => {
     }, 500);
   }
   return (
-    <div>
+    <div className="bg-for-contacts">
+      
+      <Navbar />
+        <Navbar2/>  
       <div>
+      
         <section className="contact">
+        
           <div className="content">
             <h2>Contact Us</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>

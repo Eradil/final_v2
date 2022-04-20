@@ -25,7 +25,9 @@ const Navbar = () => {
     <div className="navbar">
       <div className="header_logo">
         <h1 className="logo_txt">
-          Kyrgyz<span>Buy</span>
+          {/* <Link to={'/'}> */}
+            Kyrgyz<span>Buy</span>
+          {/* </Link> */}
         </h1>
       </div>
       <div className="navbar__inner">
@@ -78,34 +80,6 @@ const Navbar = () => {
               icon={<ShoppingOutlined />}
             ></Menu.Item>
           </Link>
-          {user ? (
-            <h2>
-              User: {user}{" "}
-              <Menu.Item
-                style={{ color: "black", listStyle: "none" }}
-                icon={<UserOutlined />}
-                onClick={logout}
-              >
-                Logout
-              </Menu.Item>
-            </h2>
-          ) : location.pathname === "/signup" ? (
-            <Menu.Item
-              style={{ color: "black", listStyle: "none" }}
-              icon={<UserOutlined />}
-              onClick={() => navigate("/signin")}
-            >
-              Login
-            </Menu.Item>
-          ) : (
-            <Menu.Item
-              style={{ color: "black", listStyle: "none" }}
-              icon={<UserOutlined />}
-              onClick={() => navigate("/signup")}
-            >
-              Register
-            </Menu.Item>
-          )}
         </Menu>
       </div>
     </div>

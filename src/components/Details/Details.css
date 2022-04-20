@@ -1,5 +1,9 @@
+.details_main{
+  display: flex;
+  background: none;
+}
 .container {
-  max-width: 1400px;
+  max-width: 900px;
   margin: 10px auto;
 }
 .details {
@@ -29,6 +33,10 @@
 }
 .info_title {
   font-weight: bolder;
+}
+
+.details-comments{
+  width: 30%;
 }
 
 @media screen and (max-width: 1023px) {

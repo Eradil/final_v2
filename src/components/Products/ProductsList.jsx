@@ -39,6 +39,8 @@ const ProductsList = () => {
     getProducts();
   }, [searchParams]);
 
+  console.log(products)
+
   return (
     <div>
       <Navbar />
